@@ -1,0 +1,109 @@
+<aside>
+
+    {{#empty(site.context.categories)}}
+    Empty.
+    {{/empty(site.context.categories)}}
+    {{^empty(site.context.categories)}}
+<style>
+.left aside a.active {
+    font-weight: bold;
+}
+
+#docs .left li a {
+    padding: 4px 0 4px 1rem;
+    border-left: 1px solid #efefef;
+}
+#docs .left li a.active {
+    border-left: 2px solid var(--link-color-active);
+    padding-left: 1.25rem;
+}
+#docs .left ul li a.active {
+    color: var(--link-color-active);
+}
+.left aside details {
+    margin-bottom: 0.25rem;
+}
+.left aside summary {
+    margin-bottom: 1rem;
+}
+.left aside details > summary {
+    list-style: none;
+}
+
+</style>
+
+<!--
+<script type="text/javascript">
+window.onload = function() {
+    let href = window.location.href;
+    var elements = Array.from(document.querySelectorAll("details a"));
+    elements.forEach(function(element) {
+        if (element.href == href) {
+
+            element.classList.add("active");
+            let isSummary = element.parentElement.nodeName.toLowerCase() == "summary"
+            if (isSummary) {
+                let details = element.parentElement.parentElement
+                details.open = true
+            }
+            else {    
+                let details = element.parentElement.parentElement.parentElement
+                details.open = true
+            }
+        }
+    });
+}
+</script>
+-->
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+    let currentUrl = window.location.href;
+    console.log(currentUrl);
+    document.querySelectorAll("aside a").forEach(link => {
+        if (link.getAttribute("href") === currentUrl) {
+            link.classList.add("active");
+            let details = link.closest("details");
+            if (details) {
+                details.open = true;
+            }
+        }
+    });
+});
+</script>
+
+    <button id="open-modal-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+    Search...</button>
+    
+    {{#site.context.categories}}
+
+    <details class="{{permalink}}" open>
+        <summary style="font-size: 1rem;"><a href="{{permalink}}">{{title}}</a></summary>
+        <ul>
+            {{#guides}}
+            <li><a href="{{permalink}}">{{title}}</a></li>
+            {{/guides}}
+        </ul>
+    </details>
+    {{/site.context.categories}}
+    <!--
+    <br><br>
+    
+    <ul>
+    {{#site.context.categories}}
+        <li class="category">
+            <a href="{{permalink}}">{{title}}</a>
+            <ul>
+            {{#guides}}
+                <li><a href="{{permalink}}">{{title}}</a></li>
+            {{/guides}}
+            </ul>
+        </li>
+    {{/site.context.categories}}
+    </ul>
+    -->
+    {{/empty(site.context.categories)}}
+</aside>

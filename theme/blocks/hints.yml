@@ -1,0 +1,10 @@
+name: hints
+requiresParentDirective: exercise
+output: '<details class="hints">
+    <summary>
+    Hints
+    </summary>
+    <div>
+    {{contents}}
+    </div>
+</details>'

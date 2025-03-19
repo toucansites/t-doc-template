@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html {{#site.language}}lang="{{.}}"{{/site.language}}>
+<head>
+    <meta charset="utf-8">
+    {{#page.noindex}}<meta name="robots" content="noindex">{{/page.noindex}}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="canonical" href="{{page.canonical}}">
+    {{#page.hreflang}}
+    <link rel="alternate" hreflang="{{lang}}" href="{{url}}">
+    {{/page.hreflang}}
+    {{#page.prev}}<link rel="prev" href="{{permalink}}">{{/page.prev}}
+    {{#page.next}}<link rel="next" href="{{permalink}}">{{/page.next}}
+    
+    <title>{{page.title}} - {{site.title}}</title>
+    <meta name="description" content="{{page.description}}">
+    
+    <meta property="og:url" content="{{page.permalink}}">
+    <meta property="og:title" content="{{page.title}} - {{site.title}}">
+    <meta property="og:description" content="{{page.description}}">
+    {{#page.imageUrl}}<meta property="og:image" content="{{.}}" />{{/page.imageUrl}}
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{page.title}} - {{site.title}}">
+    <meta name="twitter:description" content="{{page.description}}">
+    {{#page.imageUrl}}<meta name="twitter:image" content="{{.}}">{{/page.imageUrl}}
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="/css/modern-normalize.css">
+    <link rel="stylesheet" href="/css/modern-base.css">
+    <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    
+    {{#page.css}}<link rel="stylesheet" href="{{.}}">{{/page.css}}
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+        media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+        media="(prefers-color-scheme: dark)"
+    >
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</head>
+
+<body >
+    {{> partials.navigation}}
+
+    <main id="page-container" class="wrapper">
+   <!-- {{#page.title}}
+        <h1>{{.}}</h1>
+    {{/page.title}} -->
+    {{$main}}
+        <p>No content.</p>
+    {{/main}}
+    </main>
+
+    {{> partials.footer}}
+
+    {{#page.js}}<script src="{{.}}" async></script>{{/page.js}}
+    <script src="/javascript/modal.js" defer></script>
+</body>
+</html>

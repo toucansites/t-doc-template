@@ -1,0 +1,30 @@
+{{<html}}
+{{$main}}
+<div id="docs">
+    <div class="left">
+        {{> partials.docs.categories }}
+    </div>
+    <div class="center">
+        <article>
+            {{& page.contents}}
+
+            {{#empty(site.context.categories)}}
+            {{/empty(site.context.categories)}}
+            {{^empty(site.context.categories)}}
+            <h2>Chapters</h2>
+            <ul>
+            {{#site.context.categories}}
+                <li><a href="{{permalink}}">{{title}}</a></li>
+            {{/site.context.categories}}
+            </ul>
+            {{/empty(site.context.categories)}}
+
+
+        </article>
+    </div>
+    <div class="right">
+        {{> partials.toc }}
+    </div>
+</div>
+{{/main}}
+{{/html}}
