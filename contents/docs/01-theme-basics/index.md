@@ -1,6 +1,8 @@
 ---
-type: category
+id: theme-basics
 slug: theme-basics
+type: category
+
 title: 'Theme basics'
 description: ''
 order: 1

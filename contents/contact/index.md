@@ -2,6 +2,7 @@
 title: Get in touch
 description: Contact
 template: pages.contact
+type: page
 ---
 
 # Get in touch

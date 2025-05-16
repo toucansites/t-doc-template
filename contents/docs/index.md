@@ -1,6 +1,7 @@
 ---
 title: 'Learn How to Use the T-Doc Theme'
 description: 'This guide will help you use the Toucan SSG theme'
+slug: docs
 template: docs.home
 ---
 

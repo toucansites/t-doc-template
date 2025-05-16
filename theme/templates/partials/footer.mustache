@@ -12,17 +12,17 @@
                 <img
                     id="footer-logo"
                     src="/images/logos/logo.png"
-                    alt="Logo of {{site.title}}"
-                    title="{{site.title}}"
+                    alt="Logo of {{site.name}}"
+                    title="{{site.name}}"
                     >
             </picture>
-            {{site.title}}
+            {{site.name}}
         </a>
         <p>
 A flexible and powerful theme for Toucan, designed for clear and easy-to-maintain documentation of any product, service, or project.        </p>
         </div>
     <div class="footer-social">
-        {{#footer-socials}}
+        {{#site.footer-socials}}
             <small>
                 <a href="{{url}}" target="_blank">
                     {{#icon}}
@@ -33,15 +33,15 @@ A flexible and powerful theme for Toucan, designed for clear and easy-to-maintai
                     {{/icon}}
                 </a>
             </small>
-        {{/footer-socials}}
-        {{^footer-socials}}
+        {{/site.footer-socials}}
+        {{^site.footer-socials}}
             <small>No social links</small>
-        {{/footer-socials}}
+        {{/site.footer-socials}}
     </div>
     </div>
         <div class="footer-bottom">
             <div id="footer-bottom-div1">
-                <small>{{site.title}} &copy; {{year}}</small>
+                <small>{{site.name}} &copy; {{site.generation.formats.year}}</small>
             </div>
             <div id="footer-bottom-div2">
                 <small>This site was generated using <a href="https://swift.org/" target="_blank">Swift</a> & <a href="https://github.com/binarybirds/toucan" target="_blank">Toucan</a>.</small>

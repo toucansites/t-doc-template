@@ -1,9 +1,9 @@
 <aside>
 
-    {{#empty(site.context.categories)}}
+    {{#empty(context.categories)}}
     Empty.
-    {{/empty(site.context.categories)}}
-    {{^empty(site.context.categories)}}
+    {{/empty(context.categories)}}
+    {{^empty(context.categories)}}
 <style>
 .left aside a.active {
     font-weight: bold;
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </svg>
     Search...</button>
     
-    {{#site.context.categories}}
+    {{#context.categories}}
 
     <details class="{{permalink}}" open>
         <summary style="font-size: 1rem;"><a href="{{permalink}}">{{title}}</a></summary>
@@ -88,12 +88,12 @@ document.addEventListener("DOMContentLoaded", function () {
             {{/guides}}
         </ul>
     </details>
-    {{/site.context.categories}}
+    {{/context.categories}}
     <!--
     <br><br>
     
     <ul>
-    {{#site.context.categories}}
+    {{#context.categories}}
         <li class="category">
             <a href="{{permalink}}">{{title}}</a>
             <ul>
@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
             {{/guides}}
             </ul>
         </li>
-    {{/site.context.categories}}
+    {{/context.categories}}
     </ul>
     -->
-    {{/empty(site.context.categories)}}
+    {{/empty(context.categories)}}
 </aside>

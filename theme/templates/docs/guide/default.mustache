@@ -14,35 +14,7 @@
             <br/>
             <hr>
             <br/>
-            {{& page.contents}}
-
-<!--
-            <section>
-            <div class="grid grid-2">
-            {{^page.prev}}
-            <div></div>
-            {{/page.prev}}
-            {{#page.prev}}
-            <div class="prev">
-                <h4>&larr; Prev guide</h4>
-                <small>{{category.title}}</small>
-                <a href="{{permalink}}">{{title}}</a>
-            </div>
-            {{/page.prev}}
-                
-            {{^page.next}}
-            <div></div>
-            {{/page.next}}
-            {{#page.next}}
-            <div class="next">
-                <h4 style="text-align: right;">Next guide &rarr;</h4>
-                <small>{{category.title}}</small>
-                <a href="{{permalink}}">{{title}}</a>
-            </div>
-            {{/page.next}}
-            </div>
-            </section>
-            -->
+            {{& page.contents.html}}
 
         </article>
     </div>

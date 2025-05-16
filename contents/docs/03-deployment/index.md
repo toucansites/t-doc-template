@@ -1,6 +1,8 @@
 ---
-type: category
+id: deployment
 slug: deployment
+type: category
+
 title: 'Deployment'
 description: ''
 order: 4

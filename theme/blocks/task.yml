@@ -1,8 +1,0 @@
-name: task
-requiresParentDirective: exercise
-output: '<div class="task">
-    {{contents}}
-</div>'
-
-    
-    

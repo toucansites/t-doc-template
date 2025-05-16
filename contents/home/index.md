@@ -1,7 +1,10 @@
 ---
+slug: ''
 title: Welcome to T-Doc theme
 description: Learn how to use T-Doc, the ultimate documentation generator for your projects.
 image: /images/default.jpg
+type: page
+template: pages.home
 ---
 
 ![cover](/images/default.jpg)

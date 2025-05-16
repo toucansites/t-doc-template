@@ -2,6 +2,7 @@
 title: About This Documentation
 description: Learn more about this documentation and its purpose.
 template: pages.about
+type: page
 ---
 
 # About T-Doc

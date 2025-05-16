@@ -1,35 +1,16 @@
 id: guide
-template: docs.guide.default
+paths:
+  - docs/guide
 
 properties:
-    order:
-        type: int
-        required: true
+  title:
+    type: string
+    required: true
 
 relations:
-    category:
-        references: category
-        join: one
-
-context:
-    site:
-        guides:
-            sort: title
-            order: asc
-            pagination:
-                limit: 10
-    local:
-        prev:
-            references: guide
-            foreignKey: $prev
-            sort: order
-            order: asc
-
-        next:
-            references: guide
-            foreignKey: $next
-            sort: order
-            order: asc
-        
-
-
+  category:
+    references: category
+    type: one
+    order:
+      key: title
+      direction: asc

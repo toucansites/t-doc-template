@@ -1,6 +1,8 @@
 ---
-type: category
+id: markdown-basics
 slug: markdown-basics
+type: category
+
 title: 'Markdown basics'
 description: ''
 order: 3

@@ -1,8 +1,21 @@
-.PHONY: copy
+SHELL=/bin/bash
 
-copy:
-	@if [ -z "$(TARGET_DIR)" ]; then \
-		echo "❌ Error: Please specify TARGET_DIR. Usage: make copy TARGET_DIR=/path/to/target"; \
-		exit 1; \
-	fi
-	./copy_data.sh $(TARGET_DIR)
+# brew install optipng jpegoptim
+
+dev:
+	toucan generate ./src ./docs --base-url http://localhost:3000/
+
+dist:
+	toucan generate ./src ./docs
+
+watch:
+	toucan watch ./src ./docs --base-url http://localhost:3000/
+
+serve:
+	toucan serve ./docs -p 3000
+
+png:
+	find ./src/* -type f -name '*.png' -exec optipng -o7 {} \;
+
+jpg:
+	find ./src/* -type f -name '*.jpg' | xargs jpegoptim --all-progressive '*.jpg'

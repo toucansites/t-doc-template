@@ -1,0 +1,32 @@
+id: html
+
+queries:
+  categories:
+    contentType: category
+    scope: detail
+    orderBy:
+      - key: order
+        direction: asc
+
+contentTypes:
+  include:
+    - category
+    - guide
+    - page
+
+# iterators:
+
+engine:
+  id: mustache
+  options:
+    contentTypes:
+      page:
+        template: 'pages.default'
+      category:
+        template: 'docs.category.default'
+      guide:
+        template: 'docs.guide.default'
+output:
+  path: '{{slug}}'
+  file: index
+  ext: html

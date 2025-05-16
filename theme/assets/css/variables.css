@@ -1,4 +1,8 @@
 :root {
+  --primary-color: #079a91;
+  --primary-color-50: #effefa;
+  --primary-color-100: #cafdf3;
+
   --link-color: #079a91;
   --link-color-visited: #079a91;
   --link-color-hover: #079a91;

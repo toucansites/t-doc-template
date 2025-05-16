@@ -6,18 +6,18 @@
     </div>
     <div class="center">
         <article>
-            {{& page.contents}}
+            {{& page.contents.html}}
 
-            {{#empty(site.context.categories)}}
-            {{/empty(site.context.categories)}}
-            {{^empty(site.context.categories)}}
+            {{#empty(context.categories)}}
+            {{/empty(context.categories)}}
+            {{^empty(context.categories)}}
             <h2>Chapters</h2>
             <ul>
-            {{#site.context.categories}}
+            {{#context.categories}}
                 <li><a href="{{permalink}}">{{title}}</a></li>
-            {{/site.context.categories}}
+            {{/context.categories}}
             </ul>
-            {{/empty(site.context.categories)}}
+            {{/empty(context.categories)}}
 
 
         </article>
