@@ -1,11 +1,31 @@
 :root {
-  --primary-color: #079a91;
   --primary-color-50: #effefa;
   --primary-color-100: #cafdf3;
+  --primary-color-200: #95faea;
+  --primary-color-300: #58f0dc;
+  --primary-color-400: #26dbca;
+  --primary-color-500: #0dbfb1;
+  --primary-color-600: #079a91;
+  --primary-color-700: #0a7b75;
+  --primary-color-800: #0e615e;
+  --primary-color-900: #10514e;
+  --primary-color-950: #023131;
 
-  --link-color: #079a91;
-  --link-color-visited: #079a91;
-  --link-color-hover: #079a91;
+  --back-color-50: #f6f6f6;
+  --back-color-100: #e7e7e7;
+  --back-color-200: #d1d1d1;
+  --back-color-300: #b0b0b0;
+  --back-color-400: #888888;
+  --back-color-500: #6d6d6d;
+  --back-color-600: #5d5d5d;
+  --back-color-700: #4f4f4f;
+  --back-color-800: #454545;
+  --back-color-900: #3d3d3d;
+  --back-color-950: #000000;
+
+  --link-color: var(--primary-color-600);
+  --link-color-visited: var(--primary-color-600);
+  --link-color-hover: var(--primary-color-600);
   --link-color-active: #e6885a;
 
   --background-color: #fff;
@@ -13,6 +33,8 @@
   --background-color-2: #efefef;
   --background-color-3: #e0e0e0;
   --background-color-4: #afafaf;
+
+  --button-background-color: #fafafa;
 
   --primary-text-color: #0f172a;
   --primary-background-color: #f9e1c6;
@@ -40,9 +62,9 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --link-color: #079a91;
-    --link-color-visited: #079a91;
-    --link-color-hover: #079a91;
+    --link-color: var(--primary-color-600);
+    --link-color-visited: var(--primary-color-600);
+    --link-color-hover: var(--primary-color-600);
     --link-color-active: #fecf04;
 
     --text-color: #c9c9c9;
@@ -58,21 +80,9 @@
     --background-color-3: #333333;
     --background-color-4: #606060;
 
+    --button-background-color: #1a1a1a;
+
     --primary-text-color: #fff;
     --primary-background-color: #061e38;
-
-    --white-color: #ffffff;
-    --black-color: #000000;
-    --blue-color: #0d79ff;
-    --green-color: #2acb4e;
-    --indigo-color: #5352e2;
-    --orange-color: #ff950d;
-    --pink-color: #ff3054;
-    --purple-color: #b750f0;
-    --red-color: #ff3c33;
-    --teal-color: #59ccff;
-    --yellow-color: #ffd00d;
-    --brown-color: #a2835d;
-    --gray-color: #8d8d92;
   }
 }

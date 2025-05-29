@@ -82,10 +82,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
           const html = results
             .map((item) => {
-              const snippet = findSnippetWithQuery(
-                item.contents.html || '',
-                query
-              );
+              const snippet =
+                findSnippetWithQuery(item.contents.html || '', query) ||
+                findSnippetWithQuery(item.description || '', query) ||
+                '';
 
               return `
                 <div class="result-item" data-slug="${item.slug.value}">
@@ -96,7 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .join('');
 
-          resultsContainer.innerHTML = html;
+          resultsContainer.innerHTML =
+            html + '<div class="scroll-gradient"></div>';
         }
       }
     });
@@ -135,6 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
 
     document.body.appendChild(modalOverlay);
+    document.body.style.overflow = 'hidden';
 
     setTimeout(() => {
       const searchInput = document.getElementById('search');
@@ -156,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('custom-modal');
     if (modal) {
       modal.remove();
+      document.body.style.overflow = '';
     }
   }
 

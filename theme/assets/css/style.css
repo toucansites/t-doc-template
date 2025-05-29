@@ -454,7 +454,8 @@ article [id] {
 }
 
 .search-container {
-  background: white;
+  position: relative;
+  background: var(--background-color);
   padding: 8px;
   border-radius: 8px;
   display: flex;
@@ -483,6 +484,7 @@ article [id] {
   width: 100%;
   height: 100%;
   border: none;
+  background: var(--background-color);
   border-radius: 8px;
 }
 
@@ -490,7 +492,7 @@ article [id] {
   display: flex;
   height: 36px;
   width: 246px;
-  background: #fafafa;
+  background: var(--button-background-color);
   color: var(--text-color-3);
   border: 1px solid var(--background-color-3);
   border-radius: 8px;
@@ -522,10 +524,27 @@ article {
 
 #search-results {
   width: 100%;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.scroll-gradient {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--background-color));
+  z-index: 1;
 }
 
 #search-results > div:nth-child(1) {
   margin-top: 8px;
+}
+
+#search-results > div:nth-last-child(2) {
+  margin-bottom: 16px;
 }
 
 .result-item:hover {
@@ -552,4 +571,24 @@ article {
 
 .result-item p {
   font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .search-container {
+    background: var(--background-color-1);
+  }
+  #search {
+    background: var(--background-color-1);
+    color: var(--text-color-1);
+  }
+  .scroll-gradient {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--background-color-1)
+    );
+  }
+  .result-item:hover {
+    background: var(--background-color-2);
+  }
 }

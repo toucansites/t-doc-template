@@ -3,18 +3,21 @@ window.searchDocs = async function (query) {
 
   try {
     const res = await fetch('/api/content.json');
-    const data = await res.json();
+    const guides = await res.json();
 
     const lowerQuery = query.toLowerCase();
 
-    const guides = data.context.guides || [];
-
     const results = guides.filter((item) => {
-      return (
+      const hit =
         item.title?.toLowerCase().includes(lowerQuery) ||
         item.description?.toLowerCase().includes(lowerQuery) ||
-        item.contents.html?.toLowerCase().includes(lowerQuery)
-      );
+        item.contents.html?.toLowerCase().includes(lowerQuery);
+
+      if (hit) {
+        console.log('MATCH:', item.title, '->', lowerQuery);
+      }
+
+      return hit;
     });
 
     return results;

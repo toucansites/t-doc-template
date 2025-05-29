@@ -12,9 +12,16 @@
 #footer-top-div1 > a {
   display: flex;
   align-items: center;
-  line-height: 0;
+  line-height: normal;
   text-align: left;
   font-size: 2rem;
+}
+
+#footer-top-div1 > a svg {
+  width: 32px;
+  height: 32px;
+  margin-right: 0;
+  flex-shrink: 0;
 }
 
 .footer-top {
@@ -22,6 +29,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 0 28px;
 }
 
 #footer-top-div1 {
@@ -47,6 +55,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
+  padding: 0 28px;
 }
 
 #footer-bottom-div1 {

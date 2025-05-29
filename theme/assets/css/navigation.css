@@ -1,13 +1,21 @@
 #navigation {
   overflow: hidden;
   padding: 0 20px;
+  min-height: 72px;
 }
 #navigation > a {
   display: flex;
   align-items: center;
-  line-height: 0;
+  line-height: normal;
   padding: 16px 8px;
   text-align: left;
+  white-space: nowrap;
+}
+#navigation > a svg {
+  width: 32px;
+  height: 32px;
+  margin-right: 0;
+  flex-shrink: 0;
 }
 #navigation > a img {
   height: 50px;
@@ -76,6 +84,34 @@
   transform: rotate(-45deg) translateY(-6px);
 }
 
+#color-picker {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.2s ease;
+  margin: auto 0;
+}
+
+#color-picker:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+}
+
+#color-picker::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 50%;
+}
+
+#color-picker::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 600px) {
   #navigation .menu-items a:not(:last-child) {
     border-bottom: 1px solid var(--text-color-1);
@@ -93,15 +129,18 @@
   #navigation nav {
     overflow: hidden;
     grid-column: span 1;
+    height: 100%;
   }
   #primary-menu-button ~ label {
     display: none;
   }
   #navigation nav .menu-items {
-    display: block;
-    max-height: none;
-    text-align: right;
-    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 36px;
+    height: 100%;
   }
 
   #navigation nav .menu-items a {

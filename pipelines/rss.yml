@@ -1,5 +1,5 @@
-# TODO: Ez sem jo!
 id: rss
+definesType: true
 
 queries:
   categories:

@@ -1,9 +1,5 @@
 id: page
 default: true
-paths: 
-  - home
-  - about
-  - contact
 
 properties:
   title:

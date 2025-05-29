@@ -26,8 +26,8 @@
     {{#page.image}}<meta name="twitter:image" content="{{.}}">{{/page.image}}
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg">
     <link rel="manifest" href="/site.webmanifest">
 
     <link rel="stylesheet" href="{{site.baseUrl}}/css/modern-normalize.css">
@@ -56,20 +56,23 @@
 
 </head>
 
-<body >
-    {{> partials.navigation}}
-
-    <main id="page-container" class="wrapper">
-
-    {{$main}}
-        <p>No content.</p>
-    {{/main}}
-    </main>
-
-    {{> partials.footer}}
+<body>
+    <div class='bg'></div>
+    <div class='content'>
+        {{> partials.navigation}}
+        <main id="page-container" class="wrapper">
+        {{$main}}
+            <p>No content.</p>
+        {{/main}}
+        </main>
+        {{> partials.footer}}
+    </div>
 
     {{#page.js}}<script src="{{.}}" async></script>{{/page.js}}
     <script src="{{site.baseUrl}}/javascript/search.js"></script>
     <script src="{{site.baseUrl}}/javascript/modal.js" defer></script>
+    <script src="{{site.baseUrl}}/javascript/getScale.js" defer></script>
+    <script src="{{site.baseUrl}}/javascript/generateScale.js" defer></script>
+    <script src="{{site.baseUrl}}/javascript/generateTailwindScale.js"></script>
 </body>
 </html>
