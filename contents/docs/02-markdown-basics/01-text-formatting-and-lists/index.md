@@ -21,7 +21,7 @@ Markdown is a lightweight markup language for formatting plain text. Here’s ho
 
 Use `#` for headings. The number of `#` symbols determines the level:
 
-```markdown
+```
 # Heading 1
 
 ## Heading 2

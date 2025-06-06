@@ -63,7 +63,7 @@ Add a title in quotes for extra context:
 
 Use pipes `|` and dashes `-` to create tables:
 
-```markdown
+```
 | Syntax   | Description |
 | -------- | ----------- |
 | **Bold** | Bold text   |

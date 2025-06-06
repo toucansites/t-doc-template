@@ -42,7 +42,7 @@ Categories are essential for organizing content in documentation websites. They 
 
 2. Add the following content to the `index.md` file:
 
-   ```markdown
+   ```yaml
    ---
    type: category
    slug: my-new-category
@@ -96,7 +96,7 @@ Once the category is created, regenerate your site to apply the changes:
 
   - To assign a category to a guide, include it in the `category` field of the guide’s `index.md` file. Example:
 
-    ```markdown
+    ```yaml
     category: my-new-category
     ```
 

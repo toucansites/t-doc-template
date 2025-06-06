@@ -100,7 +100,7 @@ Adding a new guide is essential to keeping your site updated with fresh content.
 
 2. Place your images in the **assets** folder and reference them in your Markdown content. Example:
 
-   ```markdown
+   ```
    ![My Image](./assets/my-image.jpg)
    ```
 

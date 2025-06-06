@@ -7,7 +7,7 @@ type: page
 template: pages.home
 ---
 
-![cover](/images/default.jpg)
+![cover](./images/default.jpg)
 
 Welcome to T-Doc and thank you for choosing our theme!
 
@@ -37,6 +37,6 @@ Happy documenting! 🚀
 This page is just a **template**, so feel free to modify or replace it to match your project's identity.
 
 - **To edit this page**, update the content in:  
-  📂 `/src/contents/home/index.md`
+  📂 `/src/contents/index.md`
 - **To customize the template itself**, modify:  
   📂 `/src/themes/default/templates/pages/home.mustache`

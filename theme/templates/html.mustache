@@ -69,10 +69,8 @@
     </div>
 
     {{#page.js}}<script src="{{.}}" async></script>{{/page.js}}
+    <script>window.__BASE_URL__ = "{{site.baseUrl}}";</script>
     <script src="{{site.baseUrl}}/javascript/search.js"></script>
     <script src="{{site.baseUrl}}/javascript/modal.js" defer></script>
-    <script src="{{site.baseUrl}}/javascript/getScale.js" defer></script>
-    <script src="{{site.baseUrl}}/javascript/generateScale.js" defer></script>
-    <script src="{{site.baseUrl}}/javascript/generateTailwindScale.js"></script>
-</body>
+    </body>
 </html>
