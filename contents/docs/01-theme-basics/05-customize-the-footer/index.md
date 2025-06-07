@@ -15,7 +15,7 @@ The footer is an important section of your website, often used to display additi
 
 ### Step 1: Edit the Footer Content
 
-1. Open the **src/contents/index.yaml** file in your project directory.
+1. Open the **src/site.yaml** file in your project directory.
 
    - This file contains the global configuration for your site, including footer content.
 
@@ -46,7 +46,7 @@ footer-socials:
 
 ### Step 2: Add Custom Links or Text
 
-1. To include additional text (e.g., copyright notices or custom links), locate or add a section like this in **index.yaml**:
+1. To include additional text (e.g., copyright notices or custom links), locate or add a section like this in **site.yaml**:
 
    ```yaml
    footer-links:
@@ -57,8 +57,12 @@ footer-socials:
    ```
 
 2. Modify the content to fit your requirements:
+
    - **label**: The text for the footer link.
    - **url**: The relative or absolute URL for the link.
+
+3. (Optional) Add your custom inline svg icon:
+   - **icon**: The icon for the footer link.
 
 ---
 

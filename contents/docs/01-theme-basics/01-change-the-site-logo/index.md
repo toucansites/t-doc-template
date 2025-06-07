@@ -13,16 +13,67 @@ The **site logo** is one of the key elements of your site's branding. In **T-Doc
 
 ---
 
-## Step 1: Locate the Logo Files
+## Option 1: Modify the Template Instead
 
-1. Navigate to the **src/contents/assets/images/logos/** directory in your project folder.
+Instead of replacing the default `logo.png` files, you can directly modify the navigation template to use your own inline SVG or a custom image tag.
+
+### Use a Custom Inline SVG
+
+1. Open the navigation template file:
+
+   ```
+   src/themes/default/templates/partials/navigation.mustache
+   ```
+
+2. Locate the following block:
+
+   ```html
+   <a href="{{site.baseUrl}}/" class="logo">
+     <svg ...>...</svg>
+     <span>{{site.name}}</span>
+   </a>
+   ```
+
+3. Replace the `&lt;svg&gt;` tag with your own custom inline SVG content.
+
+### Use a Custom <img> Tag
+
+If you prefer using an image file instead of inline SVG:
+
+1. Replace the `&lt;svg&gt;` element with an image tag, like so:
+
+   ```html
+   <picture>
+     <source
+       srcset="{{site.baseUrl}}/images/logos/logo~dark.png"
+       media="(prefers-color-scheme: dark)"
+     />
+     <img
+       src="{{site.baseUrl}}/images/logos/logo.png"
+       alt="Logo of {{site.title}}"
+       title="{{site.title}}"
+     />
+   </picture>
+   ```
+
+2. Make sure the path matches your custom logo file and that it's placed in the correct location.
+
+3. You may optionally add logic for dark mode by switching the image source via JavaScript or CSS.
+
+> Tip: Keep the `alt` attribute meaningful for better accessibility.
+
+---
+
+## Option 2: Replace the Default Logo Files
+
+1. Navigate to the **src/assets/images/logos/** directory in your project folder.
    - By default, this folder contains two logo files::
      - **logo.png**: The primary logo used across the site.
      - **logo~dark.png**: A variation of the logo used in dark mode (if your site supports it).
 
 ---
 
-## Step 2: Prepare Your Custom Logos
+### Step 1: Prepare Your Custom Logos
 
 1. **Create Your Custom Logos**:
 
@@ -35,17 +86,17 @@ The **site logo** is one of the key elements of your site's branding. In **T-Doc
 
 ---
 
-## Step 3: Replace the Logo Files
+### Step 2: Replace the Logo Files
 
 1. Rename your custom logos to match the default logo file names:
    - `logo.png` (for the primary logo)
    - `logo~dark.png` (for the dark mode logo)
-2. Copy your custom logo files into the **src/contents/assets/images/logos/** directory.
+2. Copy your custom logo files into the **src/assets/images/logos/** directory.
    - Overwrite the existing `logo.png` and `logo~dark.png` files.
 
 ---
 
-## Step 4: Regenerate the Site
+### Step 3: Regenerate the Site
 
 After replacing the logo files, you need to regenerate your site for the changes to take effect:
 
@@ -60,7 +111,7 @@ After replacing the logo files, you need to regenerate your site for the changes
 
 ---
 
-## Step 5: Preview Your Changes
+### Step 4: Preview Your Changes
 
 1. Start the local development server to preview the updated site:
 
@@ -75,14 +126,12 @@ After replacing the logo files, you need to regenerate your site for the changes
 
 ---
 
-## Step 6: Troubleshooting
+### Step 5: Troubleshooting
 
 If the updated logo does not appear, check the following:
 
 1. **File Naming**: Ensure that your custom files are named exactly `logo.png` and `logo~dark.png`.
-2. **File Path**: Confirm the files are located in **src/contents/assets/images/logos/**.
+2. **File Path**: Confirm the files are located in **src/assets/images/logos/**.
 3. **Cache**: Clear your browser cache or use an incognito window to view the changes.
 
 ---
-
-This guide ensures you have everything needed to update the logo in **T-Doc Theme**.

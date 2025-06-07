@@ -16,5 +16,5 @@ queries:
       operator: equals
       value: '{{id}}'
     orderBy:
-      - key: title
+      - key: order
         direction: asc

@@ -44,22 +44,45 @@ If you want to create a site in an existing repository, skip to the [Creating yo
 
 1. Clone the Repository locally to your computer, if not already done:
 
-   ```
+   ```bash
    git clone https://github.com/your-username/your-repository.git
    ```
 
-2. Navigate to the local repository folder and copy the `src` folder with all the content.
+2. Update base url
+   When deploying to GitHub Pages, you need to update the baseUrl field in the configuration file, which is location in **src/site.yml**:
+
+   ```yaml
+   baseUrl: 'http://localhost:3000/'
+   ```
+
+   Depending on your deployment setup, update baseUrl as follows:
+
+   - GitHub Pages (username/repo path):
+
+     ```yaml
+     baseUrl: 'https://yourusername.github.io/repository-name/'
+     ```
+
+   - Custom Domain (e.g., example.com):
+
+     ```yaml
+     baseUrl: 'https://example.com/'
+     ```
+
+   The **baseUrl** is used to generate correct links across your site. If it points to **localhost**, links may break when your site is live on GitHub Pages. **Always remember to update baseUrl before deploying.**
+
+3. Navigate to the local repository folder and copy the **src** folder with all the content.
    Use the generator’s serve command:
 
-   ```
+   ```bash
    toucan generate
    ```
 
-   After succesfull generation all the data is generated inside the `docs` folder by Toucan.
+   After succesfull generation all the data is generated inside the **docs** folder by Toucan.
 
-3. Push all the content to GitHub, add and commit files:
+4. Push all the content to GitHub, add and commit files:
 
-   ```
+   ```bash
    git add .
    git commit -m "Add generated site content"
    git push origin main

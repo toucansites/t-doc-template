@@ -19,6 +19,7 @@
 }
 #navigation > a img {
   height: 50px;
+  width: auto;
 }
 #navigation nav svg {
   width: 24px;
