@@ -196,23 +196,31 @@ The watch command monitors a source directory for changes and automatically rege
 
 ## Copy Theme and Default Contents
 
-1. Delete all files from the **my-site/src/themes/default** folder and from the **my-site/src/contents** folder.
+### Delete files
 
-2. Copy all files from the **t-doc-theme-1.0.0-beta.1/theme** folder in the ZIP file and paste them into the **my-site/src/themes/default** folder.
+Delete all files from the:
 
-3. Copy all files from the **t-doc-theme-1.0.0-beta.1/contents** folder in the ZIP file and paste them into the **my-site/src/contents** folder.
+1. **my-site/src/assets** folder
+2. **my-site/src/contents** folder
+3. **my-site/src/pipelines** folder
+4. **my-site/src/themes/default** folder
+5. **my-site/src/types** folder
 
-4. Copy all files from the **t-doc-theme-1.0.0-beta.1/pipelines** folder in the ZIP file and paste them into the **my-site/src/pipelines** folder.
+### Copy files
 
-5. Copy the file **t-doc-theme-1.0.0-beta.1/config.yml** in the ZIP file and paste it into the **my-site/src** folder.
+1. Copy all files from the **t-doc-theme-1.0.0-beta.1/assets** folder in the ZIP file and paste them into the **my-site/src/assets** folder.
 
-6. Copy the file **t-doc-theme-1.0.0-beta.1/site.yml** in the ZIP file and paste it into the **my-site/src** folder.
+2. Copy all files from the **t-doc-theme-1.0.0-beta.1/contents** folder in the ZIP file and paste them into the **my-site/src/contents** folder.
 
-7. Copy all files from the **t-doc-theme-1.0.0-beta.1/assets** folder in the ZIP file and paste them into the **my-site/src/assets** folder.
+3. Copy all files from the **t-doc-theme-1.0.0-beta.1/pipelines** folder in the ZIP file and paste them into the **my-site/src/pipelines** folder.
 
-8. Copy all files from the **t-doc-theme-1.0.0-beta.1/blocks** folder in the ZIP file and paste them into the **my-site/src/blocks** folder.
+4. Copy all files from the **t-doc-theme-1.0.0-beta.1/theme** folder in the ZIP file and paste them into the **my-site/src/themes/default** folder.
 
-9. Copy all files from the **t-doc-theme-1.0.0-beta.1/types** folder in the ZIP file and paste them into the **my-site/src/types** folder.
+5. Copy all files from the **t-doc-theme-1.0.0-beta.1/types** folder in the ZIP file and paste them into the **my-site/src/types** folder.
+
+6. Copy the file **t-doc-theme-1.0.0-beta.1/config.yml** in the ZIP file and paste it into the **my-site/src** folder.
+
+7. Copy the file **t-doc-theme-1.0.0-beta.1/site.yml** in the ZIP file and paste it into the **my-site/src** folder.
 
 After successful file copies, your project will have the following structure:
 
@@ -221,7 +229,6 @@ my-site/
 ├── docs
 └── src/
       ├── assets/
-      ├── blocks/
       ├── contents/
       │   ├── 404
       │   ├── about
