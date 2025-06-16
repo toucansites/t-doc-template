@@ -198,7 +198,7 @@ The watch command monitors a source directory for changes and automatically rege
 
 ### Delete files
 
-Delete all files from the:
+Delete all files and sub-folders from the:
 
 1. **my-site/src/assets** folder
 2. **my-site/src/contents** folder
@@ -218,9 +218,9 @@ Delete all files from the:
 
 5. Copy all files from the **t-doc-theme-1.0.0-beta.1/types** folder in the ZIP file and paste them into the **my-site/src/types** folder.
 
-6. Copy the file **t-doc-theme-1.0.0-beta.1/config.yml** in the ZIP file and paste it into the **my-site/src** folder.
+6. Copy the file **t-doc-theme-1.0.0-beta.1/config.yml** in the ZIP file and override/replace it in the **my-site/src** folder.
 
-7. Copy the file **t-doc-theme-1.0.0-beta.1/site.yml** in the ZIP file and paste it into the **my-site/src** folder.
+7. Copy the file **t-doc-theme-1.0.0-beta.1/site.yml** in the ZIP file and override/replace it in the **my-site/src** folder.
 
 After successful file copies, your project will have the following structure:
 
