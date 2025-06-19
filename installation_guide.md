@@ -147,11 +147,13 @@ Once your site is initialized, your project will have the following structure:
 
 ```text
 my-site/
-├── LICENSE            # License file for the project
-├── Makefile           # Makefile for building and managing the project
-├── README.md          # Project README file
-├── dist/              # Folder containing generated static files (HTML, CSS, etc.)
-└── src/               # Source files for content and templates
+├── .github/
+   ├── workflows/
+      ├── deploy.yml       # Deploy file for Github Actions
+├── LICENSE                # License file for the project
+├── Makefile               # Makefile for building and managing the project
+├── README.md              # Project README file
+└── src/                   # Source files for content and templates
 ```
 
 ---
@@ -164,7 +166,7 @@ my-site/
    toucan generate
    ```
 
-   - Toucan processes your content and templates, producing static HTML files in the `docs` directory.
+   - Toucan processes your content and templates, producing static HTML files in the `dist` directory.
 
 ### Step 3: Watch for changes (only for macOS for now)
 
@@ -224,50 +226,53 @@ Delete all files and sub-folders from the:
 
 After successful file copies, your project will have the following structure:
 
-```text
-my-site/
-├── dist
-└── src/
-      ├── assets/
-      ├── contents/
-      │   ├── 404
-      │   ├── about
-      │   ├── assets
-      │   ├── authors
-      │   ├── home
-      │   ├── lists
-      │   ├── posts
-      │   ├── tags
-      │   └── site.yml
-      ├── pipelines/
-      │   ├── 404.yml
-      │   ├── api.yml
-      │   ├── html.yml
-      │   ├── redirect.yml
-      │   ├── rss.yml
-      │   ├── sitemap.yml
-      └── themes/
-      │   └── default/
-      │      ├── assets
-      │      ├── blocks
-      │      ├── templates
-      │      └── types
-      ├── types/
-      └── config.yml
-      └── site.yml
+   ```text
+   my-site/
+   ├── .github/
+         ├── workflows/
+            ├── deploy.yml
+   ├── dist
+   └── src/
+         ├── assets/
+         ├── contents/
+         │   ├── 404
+         │   ├── about
+         │   ├── assets
+         │   ├── authors
+         │   ├── home
+         │   ├── lists
+         │   ├── posts
+         │   ├── tags
+         │   └── site.yml
+         ├── pipelines/
+         │   ├── 404.yml
+         │   ├── api.yml
+         │   ├── html.yml
+         │   ├── redirect.yml
+         │   ├── rss.yml
+         │   ├── sitemap.yml
+         └── themes/
+         │   └── default/
+         │      ├── assets
+         │      ├── blocks
+         │      ├── templates
+         │      └── types
+         ├── types/
+         └── config.yml
+         └── site.yml
+   ```
+
+Once all files are successfully copied, regenerate your site to apply the changes:
+
+- First run the following command:
+
+```bash
+toucan generate
 ```
 
-10. Once all files are successfully copied, regenerate your site to apply the changes:
+- After successful generation, run the following command:
 
-    - First run the following command:
-
-    ```
-    toucan generate
-    ```
-
-    - After successful generation, run the following command:
-
-```
+```bash
 toucan serve
 ```
 

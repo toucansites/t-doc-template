@@ -1,5 +1,3 @@
-# Minimal example 
+# Toucan - T-Doc theme
 
-A minimal example of a Toucan-based website.
-
-
+A premium theme for the Toucan Static Site Generator.
