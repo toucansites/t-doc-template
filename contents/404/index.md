@@ -16,6 +16,6 @@ Maybe it’s still in draft mode, or it got lost in the footnotes.
 This page is just a **template**, so feel free to modify or replace it to match your project's identity.
 
 - **To edit this page**, update the content in:  
-  📂 `/src/contents/404/index.md`
+  📂 `/contents/404/index.md`
 - **To customize the template itself**, modify:  
-  📂 `/src/themes/default/templates/pages/404.mustache`
+  📂 `/templates/default/views/pages/404.mustache`

@@ -31,24 +31,32 @@ queries:
       - key: order
         direction: asc
 
+dataTypes:
+    date:
+        formats:
+            full: 
+                format: "yyyy/MM/dd"
+            year: 
+                format: "y"
+
 contentTypes:
   include:
     - category
     - guide
     - page
 
-# iterators:
+iterators:
 
 engine:
   id: mustache
   options:
     contentTypes:
       page:
-        template: 'pages.default'
+        view: 'pages.default'
       category:
-        template: 'docs.category.default'
+        view: 'docs.category.default'
       guide:
-        template: 'docs.guide.default'
+        view: 'docs.guide.default'
 output:
   path: '{{slug}}'
   file: index

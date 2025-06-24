@@ -1,14 +1,14 @@
 id: not-found
-contentTypes:
-  include:
-    - 'not-found'
+contentTypes: 
+    include:
+        - "not-found"
 
 engine:
   id: mustache
   options:
     contentTypes:
       not-found:
-        template: 'pages.404'
+        view: 'pages.404'
 
 output:
   path: ''

@@ -1,16 +1,16 @@
 ---
-id: theme-basics
-slug: theme-basics
+id: template-basics
+slug: template-basics
 type: category
 
-title: 'Theme basics'
+title: 'Template basics'
 description: ''
 order: 1
 ---
 
-# Theme basics
+# Template basics
 
 ---
 
-In this chapter, we will learn how to modify theme elements.
-We will focus on customizing the theme for our project and adding new content.
+In this chapter, we will learn how to modify template elements.
+We will focus on customizing the template for our project and adding new content.

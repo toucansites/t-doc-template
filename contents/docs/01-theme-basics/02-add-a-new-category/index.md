@@ -1,7 +1,7 @@
 ---
 type: guide
-category: theme-basics
-slug: theme-basics/add-a-new-category
+category: template-basics
+slug: template-basics/add-a-new-category
 title: 'Add a new category'
 description: 'This guide will walk you through how to add a new category'
 order: 2
@@ -9,7 +9,7 @@ order: 2
 
 # Add a New Category
 
-Categories are essential for organizing content in documentation websites. They help visitors find guides and enhance site navigation. Follow the steps below to add a new category in **T-Doc Theme**.
+Categories are essential for organizing content in documentation websites. They help visitors find guides and enhance site navigation. Follow the steps below to add a new category in **T-Doc Template**.
 
 ---
 
@@ -102,4 +102,4 @@ Once the category is created, regenerate your site to apply the changes:
 
 ---
 
-This guide will help you easily add and manage categories in **T-Doc Theme**.
+This guide will help you easily add and manage categories in **T-Doc Template**.

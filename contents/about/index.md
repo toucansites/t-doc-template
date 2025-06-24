@@ -1,8 +1,8 @@
 ---
 title: About This Documentation
 description: Learn more about this documentation and its purpose.
-template: pages.about
-type: page
+views:
+    html: pages.about
 ---
 
 # About T-Doc
@@ -20,9 +20,9 @@ This documentation serves as a **central knowledge base** for users and develope
 This page is just a **template**, so feel free to modify or replace it to match your project's identity.
 
 - **To edit this page**, update the content in:  
-  📂 `/src/contents/about/index.md`
+  📂 `/contents/about/index.md`
 - **To customize the template itself**, modify:  
-  📂 `/src/themes/default/templates/pages/about.mustache`
+  📂 `/templates/default/views/pages/about.mustache`
 
 ---
 

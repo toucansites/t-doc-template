@@ -1,7 +1,7 @@
 ---
 type: guide
-category: theme-basics
-slug: theme-basics/add-a-new-page
+category: template-basics
+slug: template-basics/add-a-new-page
 title: 'Add a custom page'
 description: 'This guide will walk you through how to create a custom page and add it to the navigation menu'
 order: 4
@@ -9,7 +9,7 @@ order: 4
 
 # Create a Custom Page in Navigation
 
-Adding a custom page is a great way to enhance your site’s functionality by including pages like ‘Contact Us,’ ‘FAQ,’ or other static content. Follow the steps below to create a custom page and add it to the navigation menu in **T-Doc Theme**.
+Adding a custom page is a great way to enhance your site’s functionality by including pages like ‘Contact Us,’ ‘FAQ,’ or other static content. Follow the steps below to create a custom page and add it to the navigation menu in **T-Doc Template**.
 
 ---
 
@@ -94,7 +94,7 @@ You can reach our support team at [support@example.com](mailto:support@example.c
 ### Step 5: Create a New Template (Optional)
 
 1. If the default template `pages.default_page` does not fit your needs, create a custom Mustache template:
-   - Navigate to **src/themes/default/templates/pages/**.
+   - Navigate to **src/templates/default/views/pages/**.
    - Create a new Mustache file, e.g., `faq.mustache`.
 2. Update the `template` field in the custom page's metadata to use your new template:
 
@@ -137,8 +137,8 @@ Once the custom page is created, regenerate the site to apply the changes:
 - **Updating Content**:
   - You can edit the `index.md` file at any time to update the content of the custom page.
 - **Styling**:
-  - Update the relevant Mustache templates and CSS files in the **themes/default/** directory to customize the page's look.
+  - Update the relevant Mustache templates and CSS files in the **templates/default/** directory to customize the page's look.
 
 ---
 
-This guide will help you create and manage custom pages easily in **T-Doc Theme**.
+This guide will help you create and manage custom pages easily in **T-Doc Template**.

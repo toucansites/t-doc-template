@@ -1,7 +1,7 @@
 ---
 type: guide
-category: theme-basics
-slug: theme-basics/change-the-site-logo
+category: template-basics
+slug: template-basics/change-the-site-logo
 title: 'Change the Site Logo'
 description: 'This guide will walk you through how to change the site logo'
 order: 1
@@ -9,7 +9,7 @@ order: 1
 
 # Change the Site Logo
 
-The **site logo** is one of the key elements of your site's branding. In **T-Doc Theme**, the logo is located in the `assets` folder and can be customized easily. Follow the steps below to update your site logo.
+The **site logo** is one of the key elements of your site's branding. In **T-Doc Template**, the logo is located in the `assets` folder and can be customized easily. Follow the steps below to update your site logo.
 
 ---
 
@@ -22,13 +22,13 @@ Instead of replacing the default `logo.png` files, you can directly modify the n
 1. Open the navigation template file:
 
    ```
-   src/themes/default/templates/partials/navigation.mustache
+   src/templates/default/views/partials/navigation.mustache
    ```
 
 2. Locate the following block:
 
    ```html
-   <a href="{{site.baseUrl}}/" class="logo">
+   <a href="{{baseUrl}}/" class="logo">
      <svg ...>...</svg>
      <span>{{site.name}}</span>
    </a>
@@ -45,13 +45,13 @@ If you prefer using an image file instead of inline SVG:
    ```html
    <picture>
      <source
-       srcset="{{site.baseUrl}}/images/logos/logo~dark.png"
+       srcset="{{baseUrl}}/images/logos/logo~dark.png"
        media="(prefers-color-scheme: dark)"
      />
      <img
-       src="{{site.baseUrl}}/images/logos/logo.png"
-       alt="Logo of {{site.title}}"
-       title="{{site.title}}"
+       src="{{baseUrl}}/images/logos/logo.png"
+       alt="Logo of {{site.name}}"
+       title="{{site.name}}"
      />
    </picture>
    ```

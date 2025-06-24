@@ -1,7 +1,7 @@
 ---
 type: guide
-category: theme-basics
-slug: theme-basics/add-a-new-guide
+category: template-basics
+slug: template-basics/add-a-new-guide
 title: 'Add a new guide'
 description: 'This guide will walk you through how to add a new guide.'
 order: 3
@@ -9,7 +9,7 @@ order: 3
 
 # Add a New Guide
 
-Adding a new guide is essential to keeping your site updated with fresh content. Follow these steps to create and publish a new guide in **T-Doc Theme**.
+Adding a new guide is essential to keeping your site updated with fresh content. Follow these steps to create and publish a new guide in **T-Doc Template**.
 
 ---
 
@@ -141,4 +141,4 @@ Once the guide is created, regenerate your site to apply the changes:
 
 ---
 
-This guide will help you easily create and manage guides in **Try-O-Theme**.
+This guide will help you easily create and manage guides in **T-Doc Template**.

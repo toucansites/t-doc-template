@@ -1,7 +1,7 @@
 ---
 type: guide
-category: theme-basics
-slug: theme-basics/customize-the-footer
+category: template-basics
+slug: template-basics/customize-the-footer
 title: 'Customize the footer'
 description: 'This guide will walk you through customizing the footer.'
 order: 5
@@ -9,7 +9,7 @@ order: 5
 
 # Customize the Footer
 
-The footer is an important section of your website, often used to display additional navigation, social media links, or copyright information. Follow these steps to customize the footer in **T-Doc Theme**.
+The footer is an important section of your website, often used to display additional navigation, social media links, or copyright information. Follow these steps to customize the footer in **T-Doc Template**.
 
 ---
 
@@ -68,7 +68,7 @@ footer-socials:
 
 ### Step 3: Update Footer Styles (Optional)
 
-1. Navigate to the **src/themes/default/templates/partials/** directory. The footer layout is defined in the Mustache file: `footer.mustache`.
+1. Navigate to the **src/templates/default/views/partials/** directory. The footer layout is defined in the Mustache file: `footer.mustache`.
 
 2. Edit the `footer.mustache` to adjust the structure, style, or additional content. Example:
 
@@ -87,7 +87,7 @@ footer-socials:
    </footer>
    ```
 
-3. Modify the CSS styles in **src/themes/default/assets/css/footer.css** to match your design preferences.
+3. Modify the CSS styles in **templates/default/assets/css/footer.css** to match your design preferences.
 
 ---
 
@@ -122,8 +122,8 @@ After updating the footer content or styles, regenerate the site to apply the ch
 - **Dynamic Content**:
   - You can dynamically add more social or custom links and other custom elements by expanding the `index.yaml` file.
 - **Footer Layout**:
-  - For advanced customization, create a new footer template or modify the existing `footer.mustache` file, or copy and adjust files from the default theme.
+  - For advanced customization, create a new footer template or modify the existing `footer.mustache` file, or copy and adjust files from the default template.
 
 ---
 
-This guide ensures you can easily customize and manage your footer content in **T-Doc Theme**.
+This guide ensures you can easily customize and manage your footer content in **T-Doc Template**.

@@ -1,8 +1,6 @@
-baseUrl: 'http://localhost:3000/'
-locale: 'en-US'
 name: 'T-Doc'
-description: 'T-Doc is a premium them for Toucan static site generator.'
-
+description: 'T-Doc is a premium template for Toucan static site generator.'
+language: 'en-US'
 navigation:
   - label: 'Docs'
     url: '/docs/'

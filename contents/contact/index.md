@@ -1,8 +1,8 @@
 ---
 title: Get in touch
 description: Contact
-template: pages.contact
-type: page
+views:
+    html: pages.contact
 ---
 
 # Get in touch
@@ -19,6 +19,6 @@ Feel free to drop us a message, we'll try to get back to you as soon as possible
 This page is just a **template**, so feel free to modify or replace it to match your project's identity.
 
 - **To edit this page**, update the content in:  
-  📂 `/src/contents/contact/index.md`
+  📂 `/contents/contact/index.md`
 - **To customize the template itself**, modify:  
-  📂 `/src/themes/default/templates/pages/contact.mustache`
+  📂 `/templates/default/views/pages/contact.mustache`
