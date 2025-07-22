@@ -1,7 +1,0 @@
-id: page
-default: true
-
-properties:
-  title:
-    type: string
-    required: true
