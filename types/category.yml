@@ -6,7 +6,10 @@ properties:
   title:
     type: string
     required: true
-
+  order:
+    type: int
+    required: true
+    
 queries:
   guides:
     contentType: guide

@@ -1,9 +1,9 @@
 ---
 title: Welcome to T-Doc template
 description: Learn how to use T-Doc, the ultimate documentation generator for your projects.
-image: /images/default.jpg
 views:
     html: pages.home
+image: /images/default.jpg
 ---
 
 ![cover](./images/default.jpg)
@@ -16,7 +16,7 @@ If you like our Toucan SSG and the T-Doc template, pls give us a star support on
 
 And if you can, please consider supporting us with a donation, here:
 
-Extra content for the **Home Page** is stored inside the **src/contents/home/index.md** file.  
+Extra content for the **Home Page** is stored inside the **contents/[home]/index.md** file.  
 To modify the home page description, instructions, or additional information, update this file.
 
 ## Why Choose T-Doc?

@@ -21,4 +21,4 @@ This page is just a **template**, so feel free to modify or replace it to match 
 - **To edit this page**, update the content in:  
   📂 `/contents/contact/index.md`
 - **To customize the template itself**, modify:  
-  📂 `/templates/default/views/pages/contact.mustache`
+  📂 `/themes/default/templates/pages/contact.mustache`

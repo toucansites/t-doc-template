@@ -1,4 +1,5 @@
 ---
+type: page
 title: 'Learn How to Use the T-Doc Template'
 description: 'This guide will help you use the Toucan SSG template'
 views:
