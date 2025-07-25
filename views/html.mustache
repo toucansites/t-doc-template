@@ -30,14 +30,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg">
     <link rel="manifest" href="/site.webmanifest">
 
-    <link rel="stylesheet" href="{{site.baseUrl}}/css/modern-normalize.css">
-    <link rel="stylesheet" href="{{site.baseUrl}}/css/modern-base.css">
-    <link rel="stylesheet" href="{{site.baseUrl}}/css/navigation.css">
-    <link rel="stylesheet" href="{{site.baseUrl}}/css/variables.css">
-    <link rel="stylesheet" href="{{site.baseUrl}}/css/base.css">
-    <link rel="stylesheet" href="{{site.baseUrl}}/css/grid.css">
-    <link rel="stylesheet" href="{{site.baseUrl}}/css/style.css">
-    <link rel="stylesheet" href="{{site.baseUrl}}/css/footer.css">
+    <link rel="stylesheet" href="{{baseUrl}}/css/modern-normalize.css">
+    <link rel="stylesheet" href="{{baseUrl}}/css/modern-base.css">
+    <link rel="stylesheet" href="{{baseUrl}}/css/navigation.css">
+    <link rel="stylesheet" href="{{baseUrl}}/css/variables.css">
+    <link rel="stylesheet" href="{{baseUrl}}/css/base.css">
+    <link rel="stylesheet" href="{{baseUrl}}/css/grid.css">
+    <link rel="stylesheet" href="{{baseUrl}}/css/style.css">
+    <link rel="stylesheet" href="{{baseUrl}}/css/footer.css">
     
     {{#page.css}}<link rel="stylesheet" href="{{.}}">{{/page.css}}
 
@@ -69,8 +69,8 @@
     </div>
 
     {{#page.js}}<script src="{{.}}" async></script>{{/page.js}}
-    <script>window.__BASE_URL__ = "{{site.baseUrl}}";</script>
-    <script src="{{site.baseUrl}}/javascript/search.js"></script>
-    <script src="{{site.baseUrl}}/javascript/modal.js" defer></script>
+    <script>window.__BASE_URL__ = "{{baseUrl}}";</script>
+    <script src="{{baseUrl}}/javascript/search.js"></script>
+    <script src="{{baseUrl}}/javascript/modal.js" defer></script>
     </body>
 </html>

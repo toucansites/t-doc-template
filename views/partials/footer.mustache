@@ -1,6 +1,9 @@
-<div id="navigation-container">
-    <header id="navigation" class="wrapper">
-        <a href="{{site.baseUrl}}/" class="logo">
+<footer id="site-footer" >
+
+<div class="wrapper">
+    <div class="footer-top">
+        <div id="footer-top-div1">
+        <a href="{{baseUrl}}/" class="logo">
             <svg viewBox="0 0 64 64" id="TwoTone" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -34,20 +37,35 @@
             </svg>
             <span>{{site.name}}</span>
         </a>
-        <nav>
-            <input type="checkbox" id="primary-menu-button" name="menu-button" class="menu-button">
-                <label for="primary-menu-button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </label>
-                <div class="menu-items">
-                    {{#site.navigation}}
-                    <a href="{{site.baseUrl}}{{url}}"{{#class}} class="{{.}}"{{/class}}>{{label}}</a>
-                    {{/site.navigation}}
-               </div>
-        </nav>
-    </header>
+        <p>
+A flexible and powerful template for Toucan, designed for clear and easy-to-maintain documentation of any product, service, or project.        </p>
+        </div>
+    <div class="footer-social">
+        {{#site.footer-socials}}
+            <small>
+                <a href="{{url}}" target="_blank">
+                    {{#icon}}
+                        {{{icon}}}
+                    {{/icon}}
+                    {{^icon}}
+                        {{title}}
+                    {{/icon}}
+                </a>
+            </small>
+        {{/site.footer-socials}}
+        {{^site.footer-socials}}
+            <small>No social links</small>
+        {{/site.footer-socials}}
+    </div>
+    </div>
+        <div class="footer-bottom">
+            <div id="footer-bottom-div1">
+                <small>{{site.name}} &copy; {{generation.formats.year}}</small>
+            </div>
+            <div id="footer-bottom-div2">
+                <small>This site was generated using <a href="https://swift.org/" target="_blank">Swift</a> & <a href="https://github.com/binarybirds/toucan" target="_blank">Toucan</a>.</small>
+            </div>
+        </div>
 </div>
+    
+</footer>

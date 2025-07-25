@@ -1,0 +1,19 @@
+name: "T-Doc"
+description: "A sleek, modern documentation template for Toucan."
+version: "1.0.0-beta.2"
+generatorVersions:
+    - "1.0.0-beta.5"
+    - "1.0.0-beta.6"
+
+authors:
+    - name: "Binary Birds Kft."
+      url: "https://binarybirds.com/"
+
+license:
+    name: "MIT license"
+    url: "https://github.com/toucansites/minimal-template?tab=MIT-1-ov-file"
+
+tags:
+    - "binarybirds"
+    - "t-doc"
+    - "template"
