@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 '';
 
               return `
-                <div class="result-item" data-slug="${item.slug.value}">
+                <div class="result-item" data-slug="${item.slug}">
                     <h1>${item.title || item.slug}</h1>
                     <p>${snippet}</p>
                 </div>
@@ -105,7 +105,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', function (e) {
       const target = e.target.closest('.result-item');
       if (target && target.dataset.slug) {
-        window.location.href = '/' + target.dataset.slug + '/';
+        const baseUrl = window.__BASE_URL__;
+        window.location.href = baseUrl + '/' + target.dataset.slug + '/';
       }
     });
 
