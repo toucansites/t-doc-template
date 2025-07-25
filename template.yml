@@ -1,4 +1,4 @@
-name: "T-Doc template"
+name: "T-Doc"
 description: "A sleek, modern documentation template for Toucan."
 version: "1.0.0-beta.2"
 generatorVersions:
