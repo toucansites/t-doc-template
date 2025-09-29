@@ -5,16 +5,9 @@
         {{> partials.docs.categories }}
     </div>
     <div class="center">
+        <div class="extra-space"></div>
         <article>
-
-            {{#page.category}}
-            <a href="{{permalink}}">{{title}}</a>
-            {{/page.category}}
-            <br/>
-            <hr>
-            <br/>
             {{& page.contents.html}}
-
         </article>
     </div>
     <div class="right">

@@ -1,12 +1,17 @@
 #site-footer {
   margin-top: auto;
   padding: 40px 0;
-  background-color: var(--footer-background-color);
+  border-top: 1px solid var(--footer-background-color);
   color: var(--text-color-1);
 }
 
-#footer-logo {
-  height: 50px;
+#footer-top-div1 .logo {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--text-color-1);
 }
 
 #footer-top-div1 > a {
@@ -18,10 +23,29 @@
 }
 
 #footer-top-div1 > a svg {
-  width: 32px;
-  height: 32px;
-  margin-right: 0;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
   flex-shrink: 0;
+}
+
+.footer-mid {
+  text-align: left;
+  max-width:389px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+.footer-mid p {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 0.688rem;
+  line-height: 160%;
+  letter-spacing: 0.5px;
+  color: var(--text-color-2);
+  margin: 10px;
 }
 
 .footer-top {
@@ -29,24 +53,34 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 28px;
+  padding: 0 20px;
 }
 
-#footer-top-div1 {
-  text-align: left;
-  max-width: 500px;
-}
-
-.footer-social {
+.footer-top-div2 {
   text-align: right;
 }
 
-.footer-social a {
+.footer-top-div2 a {
   margin-right: 10px;
   color: var(--text-color-1);
 }
-.footer-social a:hover {
+.footer-top-div2 a:hover {
   color: var(--link-color-hover2);
+}
+
+.footer-bottom small,
+.footer-bottom a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  vertical-align: baseline;
+  color: var(--text-color-1);
+}
+
+.footer-bottom a {
+  text-decoration: underline;
 }
 
 .footer-bottom {

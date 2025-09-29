@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // If a newer request started, ignore this result
         if (requestId !== currentRequestId) return;
 
-        console.log('Search results:', results);
+        //console.log('Search results:', results);
         if (!Array.isArray(results) || results.length === 0) {
           resultsContainer.innerHTML = `
             <div class="no-results">

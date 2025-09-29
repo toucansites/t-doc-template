@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 }
 html {
-	font-family: system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
+	font-family: 'Lato';
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 	tab-size: 4;
@@ -14,7 +14,7 @@ b,strong {
 	font-weight: bolder;
 }
 code,kbd,samp,pre {
-	font-family: ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;
+	font-family: 'Lato';
 	font-size: 1em;
 }
 small {

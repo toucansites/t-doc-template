@@ -14,9 +14,9 @@ window.searchDocs = async function (query) {
         item.description?.toLowerCase().includes(lowerQuery) ||
         item.contents.html?.toLowerCase().includes(lowerQuery);
 
-      if (hit) {
-        console.log('MATCH:', item.title, '->', lowerQuery);
-      }
+      //if (hit) {
+      //  console.log('MATCH:', item.title, '->', lowerQuery);
+      //}
 
       return hit;
     });
