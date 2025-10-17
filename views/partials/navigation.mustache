@@ -3,7 +3,7 @@
 
         <a href="{{baseUrl}}/" class="logo">
             <svg viewBox="0 0 50 50">
-                <use href="/images/logos/logo.svg" />
+                <use href="{{baseUrl}}/images/logos/logo.svg" />
             </svg>
 
             <span>{{site.name}}</span>
@@ -22,7 +22,7 @@
                     <div>
                         {{#svg}}
                         <svg viewBox="0 0 20 20">
-                            <use href="{{svg}}"/>
+                            <use href="{{baseUrl}}{{svg}}"/>
                         </svg>
                         {{/svg}}
 

@@ -97,7 +97,7 @@ pre {
   line-height: 1.5rem;
   background: var(--background-color);
   margin: 2rem auto;
-  border: 2px solid var(--background-color-1);
+  border: 0.5px solid var(--background-color-2);
   border-radius: 0.75rem;
   margin-bottom: 32px;
 }
@@ -114,8 +114,7 @@ pre code a {
   border-bottom: 1px dotted var(--text-color);
 }
 ul {
-  list-style: none;
-  padding-inline-start: 1rem;
+  padding-inline-start: 20px;
 }
 li {
   font-size: 1rem;
@@ -157,11 +156,12 @@ img.rounded {
   border-radius: 50%;
 }
 blockquote p {
-  padding: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: block;
-  border-left: 0.75rem solid var(--background-color-3);
-  border-radius: 0.75rem;
-  background: var(--background-color-1);
+  border: 0.5px solid var(--background-color-2);
 }
 
 .selection-off {

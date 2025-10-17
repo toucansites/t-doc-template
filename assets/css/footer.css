@@ -45,7 +45,8 @@
   line-height: 160%;
   letter-spacing: 0.5px;
   color: var(--text-color-2);
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-top {
@@ -89,7 +90,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
-  padding: 0 28px;
+  padding: 0 20px;
 }
 
 #footer-bottom-div1 {
@@ -119,10 +120,13 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .footer-top-div2 {
+    margin-top: 10px;
   }
 }
 
