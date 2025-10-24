@@ -4,7 +4,7 @@
 }
 
 ::selection {
-  color: var(--link-color);
+  color: var(--text-color-3);
   background: var(--background-color-3);
 }
 a:link {
@@ -31,7 +31,7 @@ body {
 h1 {
   font-family: 'Montserrat';
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 48px;
   letter-spacing: -0.063rem;
   vertical-align: middle;
   margin-bottom: 30px;
@@ -39,41 +39,46 @@ h1 {
 h2 {
   font-family: 'Montserrat';
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 40px;
   letter-spacing: -0.031rem;
   vertical-align: middle;
-  margin-bottom: 8px;
+  margin-top: 17px;
+  margin-bottom: 12px;
 }
 h3 {
   font-family: 'Montserrat';
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 32px;
   letter-spacing: 0rem;
   vertical-align: middle;
-  margin-bottom: 8px;
+  margin-top: 16;
+  margin-bottom: 11px;
 }
 h4 {
   font-family: 'Montserrat';
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 28px;
   letter-spacing: 0rem;
   vertical-align: middle;
-  margin-bottom: 8px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 h5 {
   font-family: 'Montserrat';
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 22px;
   letter-spacing: 0rem;
   vertical-align: middle;
-  margin-bottom: 8px;
+  margin-top: 14px;
+  margin-bottom: 9px;
 }
 h6 {
   font-family: 'Montserrat';
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 18px;
   letter-spacing: 0rem;
   vertical-align: middle;
+  margin-top: 13px;
   margin-bottom: 8px;
 }
 hr {
@@ -141,7 +146,7 @@ li code a {
   border-bottom: 1px dotted var(--text-color);
 }
 section {
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 img.small {
   width: 32px;

@@ -20,18 +20,23 @@
                 <div class="menu-items">
                     {{#site.navigation}}
                     <div>
-                        {{#svg}}
-                        <svg viewBox="0 0 20 20">
-                            <use href="{{baseUrl}}{{svg}}"/>
-                        </svg>
-                        {{/svg}}
-
+                        
                         {{#url}}
-                        <a href="{{baseUrl}}{{url}}"{{#class}} class="{{.}}"{{/class}}>{{label}}</a>
+                        <a href="{{baseUrl}}{{url}}"{{#class}} class="{{.}}"{{/class}}>
+                            {{#svg}}
+                            <span class="navigation-icon" style="--icon: url('{{baseUrl}}{{svg}}');"></span>
+                            {{/svg}}
+                            {{label}}
+                        </a>
                         {{/url}}
 
                         {{#webUrl}}
-                        <a href="{{webUrl}}" target="_blank">{{label}}</a>
+                        <a href="{{webUrl}}" target="_blank">
+                            {{#svg}}
+                            <span class="navigation-icon" style="--icon: url('{{baseUrl}}{{svg}}');"></span>
+                            {{/svg}}
+                            {{label}}
+                        </a>
                         {{/webUrl}}
 
                     </div>

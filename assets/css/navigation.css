@@ -55,32 +55,33 @@
 }
 
 #navigation .menu-items a {
-  text-align: center;
-  font-family: 'Montserrat';
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.5px;
-  vertical-align: middle;
-  text-align: left;
-  padding-left: 0px;
-  padding-left: 0px;
-  padding-top: 4px;
-  padding-bottom: 4px;
   color: var(--text-color-2);
+  text-decoration: none;
   border-bottom: none;
+}
+
+.navigation-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  -webkit-mask: var(--icon) no-repeat center / contain;
+  mask: var(--icon) no-repeat center / contain;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #navigation .menu-items a.active {
   border-bottom: 1.5px solid  var(--primary-color-600);
-}
-
-#navigation .menu-items svg {
-  width: 20px;
-  height: auto;
-  margin: 0px;
-  margin-right: 5px;
-  vertical-align: middle;
 }
 
 #navigation .menu-items div {
@@ -167,7 +168,6 @@
   }
 
   #navigation nav .menu-items a {
-    display: inline-block;
     border-bottom: none;
   }
 }
