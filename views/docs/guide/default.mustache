@@ -8,10 +8,13 @@
         <article>
 
             {{#page.category}}
-            <a href="{{permalink}}">{{title}}</a>
+            <div class="guide-category-link">
+                <a href="{{permalink}}">{{title}}</a>
+                <br/>
+                <br/>
+            </div>
             {{/page.category}}
-            <br/>
-            <br/>
+            
             {{& page.contents.html}}
 
             <div class="extra-space"></div>

@@ -405,4 +405,10 @@ document.addEventListener('DOMContentLoaded', function () {
   if (modalBtn) {
     modalBtn.addEventListener('click', openModal);
   }
+
+  const modalBtnMobile = document.getElementById('open-modal-btn-mobile');
+  if (modalBtnMobile) {
+    modalBtnMobile.addEventListener('click', openModal);
+  }
+
 });

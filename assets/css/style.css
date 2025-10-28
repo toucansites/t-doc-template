@@ -246,12 +246,13 @@ a.cta:hover {
 article {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100%; /* or set a fixed height if needed */
   position: relative;
 }
 
 article section:last-child {
-  margin-top: auto;
+  margin-top: auto; /* ✅ pushes this section to the bottom */
+}
 
 article footer {
   margin-bottom: 64px;
@@ -425,6 +426,9 @@ div.exercise summary + div {
   border-top: 1px solid var(--background-color-3);
   padding: 16px;
 }
+/* div.exercise details[open] div {
+
+} */
 
 div.exercise .hints div {
   background: var(--background-color);

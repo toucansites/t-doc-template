@@ -1,48 +1,193 @@
 <div id="navigation-container" class="wrapper">
-    <header id="navigation">
+  <header id="navigation">
 
-        <a href="{{baseUrl}}/" class="logo">
-            <svg viewBox="0 0 50 50">
-                <use href="{{baseUrl}}/images/logos/logo.svg" />
+    <div class="topbar">
+      <a href="{{baseUrl}}/" class="logo">
+        <svg viewBox="0 0 50 50">
+          <use href="{{baseUrl}}/images/logos/logo.svg" />
+        </svg>
+        <span>{{site.name}}</span>
+      </a>
+
+      <div class="search-btn" id="open-modal-btn-mobile">
+        <svg class="search-btn" viewBox="0 0 40 48">
+            <use href="{{baseUrl}}/images/mobile_search.svg" />
+        </svg>
+      </div>
+
+    </div>
+
+    <div class="mobile-nav">
+      <button id="menu-toggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24">
+            <use href="{{baseUrl}}/images/mobile_menu.svg" />
+        </svg>
+      </button>
+
+      {{^page.category.title}}
+        {{^page.title}}
+            <div></div>
+        {{/page.title}}
+
+        {{#page.title}}
+            <div class="nav-breadcrumbs">
+                <a href="{{page.permalink}}">{{page.title}}</a>
+            </div>
+        {{/page.title}}
+      {{/page.category.title}}
+
+      {{#page.category.title}}
+        <div class="nav-breadcrumbs">
+            <a href="{{page.category.permalink}}">{{page.category.title}}</a>
+            <svg viewBox="0 0 20 20">
+                <use href="{{baseUrl}}/images/mobile_arrow.svg" />
             </svg>
+            <div class="active">{{page.title}}</div>
+        </div>
+      {{/page.category.title}}
 
-            <span>{{site.name}}</span>
-        </a>
-        <nav>
-            <input type="checkbox" id="primary-menu-button" name="menu-button" class="menu-button">
-                <label for="primary-menu-button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </label>
-                <div class="menu-items">
-                    {{#site.navigation}}
-                    <div>
-                        
-                        {{#url}}
-                        <a href="{{baseUrl}}{{url}}"{{#class}} class="{{.}}"{{/class}}>
-                            {{#svg}}
-                            <span class="navigation-icon" style="--icon: url('{{baseUrl}}{{svg}}');"></span>
-                            {{/svg}}
-                            {{label}}
-                        </a>
-                        {{/url}}
+    </div>
 
-                        {{#webUrl}}
-                        <a href="{{webUrl}}" target="_blank">
-                            {{#svg}}
-                            <span class="navigation-icon" style="--icon: url('{{baseUrl}}{{svg}}');"></span>
-                            {{/svg}}
-                            {{label}}
-                        </a>
-                        {{/webUrl}}
+    <nav class="desktop-nav">
+      <div class="menu-items">
+        {{#site.navigation}}
+        <div>
+          {{#url}}
+            <a href="{{baseUrl}}{{url}}"{{#class}} class="{{.}}"{{/class}}>
+                {{#svg}}
+                <span class="navigation-icon" style="--icon: url('{{baseUrl}}{{svg}}');"></span>
+                {{/svg}}
+                {{label}}
+            </a>
+          {{/url}}
+          {{#webUrl}}
+            <a href="{{webUrl}}" target="_blank">
+                {{#svg}}
+                <span class="navigation-icon" style="--icon: url('{{baseUrl}}{{svg}}');"></span>
+                {{/svg}}
+                {{label}}
+            </a>
+          {{/webUrl}}
+        </div>
+        {{/site.navigation}}
+      </div>
+    </nav>
 
-                    </div>
-                    {{/site.navigation}}
-               </div>
-        </nav>
-    </header>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu">
+
+    <div class="select-wrapper">
+
+      <div class="select-container">
+        <select id="menu-select">
+          {{#site.navigation}}
+            {{#url}}
+              <option value="{{baseUrl}}{{url}}">{{label}}</option>
+            {{/url}}
+            {{#webUrl}}
+              <option value="{{webUrl}}">{{label}}</option>
+            {{/webUrl}}
+          {{/site.navigation}}
+        </select>
+
+        <!-- custom dropdown arrow -->
+        <img
+          src="{{baseUrl}}/images/mobile-select-icon.svg"
+          alt="Dropdown icon"
+          class="select-icon"
+        />
+      </div>
+
+      <div class="menu-list">
+        {{#context.categories}}
+          <details class="{{permalink}}" open>
+              <summary style="font-size: 1rem;"><a href="{{permalink}}">{{title}}</a></summary>
+              <ul>
+                  {{#guides}}
+                  <li><a href="{{permalink}}">{{title}}</a></li>
+                  {{/guides}}
+              </ul>
+          </details>
+        {{/context.categories}}
+      </div>
+
+    </div>
+
+    <div class="menu-divider"></div> 
+
+    <button id="close-menu" aria-label="Close Menu">✕</button>
     
+  </div>
+
 </div>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenu = document.getElementById('close-menu');
+  const baseUrl = window.location.origin;
+  const currentUrl = window.location.href;
+  const menuSelect = document.getElementById('menu-select');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('#navigation .menu-items a');
+    let currentPath = window.location.pathname.toLowerCase();
+
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      const linkText = link.textContent.trim().toLowerCase();
+
+      if (currentPath == "/404.html" || !href.includes(baseUrl)) return;
+      if (currentPath.includes(linkText)) {
+        link.classList.add('active');
+      } else if (linkText == "docs" && currentPath != "/license/") {
+        link.classList.add('active');
+      }
+      
+    });
+  });
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('menu-open');
+    });
+  }
+  if (closeMenu) {
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('menu-open');
+    });
+  }
+  if (menuSelect) {
+    for (const option of menuSelect.options) {
+      if (currentUrl == option.value) {
+        menuSelect.value = option.value;
+        break;
+      }
+    }
+
+    menuSelect.addEventListener('change', (e) => {
+      const url = e.target.value;
+      if (!url) return;
+      if (url.includes(baseUrl)) {
+        window.location.href = url;
+      } else {
+        window.open(url, '_blank');
+        menuSelect.value = currentUrl;
+      }
+    });
+  }
+
+  document.addEventListener('click', (event) => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuToggle = document.getElementById('menu-toggle');
+    if (mobileMenu && menuToggle) {
+        if (mobileMenu.classList.contains('menu-open')) {
+          if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+            mobileMenu.classList.remove('menu-open');
+          }
+        }
+    }
+  });
+
+</script>

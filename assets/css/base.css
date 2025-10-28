@@ -186,10 +186,11 @@ blockquote p {
   z-index: 0;
   top: 0;
   right: 0;
-  background: radial-gradient(
-    circle at top right,
-    var(--primary-color-200) 1%,
-    var(--white-color) 40%
+  background: linear-gradient(
+    260deg,
+    var(--primary-color-200) 0%,
+    var(--white-color) 28%,
+    var(--white-color) 100%
   );
 }
 
