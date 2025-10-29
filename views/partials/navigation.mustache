@@ -10,18 +10,14 @@
       </a>
 
       <div class="search-btn" id="open-modal-btn-mobile">
-        <svg class="search-btn" viewBox="0 0 40 48">
-            <use href="{{baseUrl}}/images/mobile_search.svg" />
-        </svg>
+        <span class="search-btn-icon" style="--icon: url('{{baseUrl}}/images/mobile_search.svg');"></span>
       </div>
 
     </div>
 
     <div class="mobile-nav">
       <button id="menu-toggle" aria-label="Menu">
-        <svg viewBox="0 0 24 24">
-            <use href="{{baseUrl}}/images/mobile_menu.svg" />
-        </svg>
+        <span class="menu-toggle-icon" style="--icon: url('{{baseUrl}}/images/mobile_menu.svg');"></span>
       </button>
 
       {{^page.category.title}}
@@ -39,9 +35,7 @@
       {{#page.category.title}}
         <div class="nav-breadcrumbs">
             <a href="{{page.category.permalink}}">{{page.category.title}}</a>
-            <svg viewBox="0 0 20 20">
-                <use href="{{baseUrl}}/images/mobile_arrow.svg" />
-            </svg>
+            <span class="breadcrumbs-arrow" style="--icon: url('{{baseUrl}}/images/mobile_arrow.svg');"></span>
             <div class="active">{{page.title}}</div>
         </div>
       {{/page.category.title}}
@@ -91,12 +85,8 @@
           {{/site.navigation}}
         </select>
 
-        <!-- custom dropdown arrow -->
-        <img
-          src="{{baseUrl}}/images/mobile-select-icon.svg"
-          alt="Dropdown icon"
-          class="select-icon"
-        />
+        <span class="select-icon" style="--icon: url('{{baseUrl}}/images/mobile-select-icon.svg');"></span>
+
       </div>
 
       <div class="menu-list">

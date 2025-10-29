@@ -60,13 +60,24 @@
 .footer-top-div2 {
   text-align: right;
 }
-
-.footer-top-div2 a {
+.footer-top-div2 a{
   margin-right: 10px;
-  color: var(--text-color-1);
+}
+.footer-top-div2 a svg{
+  fill: var(--text-color-1);
 }
 .footer-top-div2 a:hover {
   color: var(--link-color-hover2);
+}
+
+.footer-local-icon {
+  display: inline-block; 
+  width: 24px;
+  height: 24px;
+  background-color: var(--text-color-1);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) no-repeat center / contain;
+  vertical-align: middle;
 }
 
 .footer-bottom small,

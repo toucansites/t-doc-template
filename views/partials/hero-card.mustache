@@ -1,7 +1,24 @@
 <a href="{{baseUrl}}{{link}}" class="hero-card-block-link">
   <div class="hero-card-block">
     <div class="hero-card-image">
-      {{#image}}<img src="{{.}}" alt="{{title}}">{{/image}}
+
+      {{#imageDark}}
+        <picture>
+          <source
+            srcset="{{.}}"
+            media="(prefers-color-scheme: dark)"
+          />
+          <img
+            src="{{image}}" alt="{{title}}" />
+        </picture>
+      {{/imageDark}}
+
+      {{^imageDark}}
+        {{#image}}
+          <img src="{{image}}" alt="{{title}}"/>
+        {{/image}}
+      {{/imageDark}}
+
     </div>
     <div class="hero-card">
       <h5>{{title}}</h5>

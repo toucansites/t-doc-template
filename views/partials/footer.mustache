@@ -23,7 +23,7 @@
                         {{/icon}}
                         {{^icon}}
                             {{#iconLocal}}
-                                <svg width="24" height="24" viewBox="0,0,24,24"><use href="{{baseUrl}}{{.}}" /></svg>
+                                <span class="footer-local-icon" style="--icon: url('{{baseUrl}}{{.}}');"></span>
                             {{/iconLocal}}
                             {{^iconLocal}}
                                 {{title}}

@@ -789,8 +789,9 @@ article [id] {
 .info-icon {
   flex: 0 0 auto;
   width: 20px;
-  height: 20px;
-  margin-top: 4px;
+  height: 21px;
+  margin-top: 2px;
+  fill: var(--text-color-1);
 }
 
 .info-box__body {
