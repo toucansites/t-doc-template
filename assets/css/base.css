@@ -34,7 +34,6 @@ h1 {
   font-size: 48px;
   letter-spacing: -0.063rem;
   vertical-align: middle;
-  margin-bottom: 30px;
 }
 h2 {
   font-family: 'Montserrat';
@@ -42,8 +41,6 @@ h2 {
   font-size: 40px;
   letter-spacing: -0.031rem;
   vertical-align: middle;
-  margin-top: 17px;
-  margin-bottom: 12px;
 }
 h3 {
   font-family: 'Montserrat';
@@ -51,8 +48,6 @@ h3 {
   font-size: 32px;
   letter-spacing: 0rem;
   vertical-align: middle;
-  margin-top: 16;
-  margin-bottom: 11px;
 }
 h4 {
   font-family: 'Montserrat';
@@ -60,8 +55,6 @@ h4 {
   font-size: 28px;
   letter-spacing: 0rem;
   vertical-align: middle;
-  margin-top: 15px;
-  margin-bottom: 10px;
 }
 h5 {
   font-family: 'Montserrat';
@@ -69,8 +62,6 @@ h5 {
   font-size: 22px;
   letter-spacing: 0rem;
   vertical-align: middle;
-  margin-top: 14px;
-  margin-bottom: 9px;
 }
 h6 {
   font-family: 'Montserrat';
@@ -78,8 +69,6 @@ h6 {
   font-size: 18px;
   letter-spacing: 0rem;
   vertical-align: middle;
-  margin-top: 13px;
-  margin-bottom: 8px;
 }
 hr {
   border: none;
@@ -92,19 +81,14 @@ hr.spacer {
 p {
   font-size: 1rem;
   line-height: 1.5rem;
-  margin-top: 16px;
-  margin-bottom: 32px;
   color: var(--text-color-2);
-  margin-bottom: 32px;
 }
 pre {
   font-size: 1rem;
   line-height: 1.5rem;
   background: var(--background-color);
-  margin: 2rem auto;
   border: 0.5px solid var(--background-color-2);
   border-radius: 0.75rem;
-  margin-bottom: 32px;
 }
 pre code {
   text-shadow: none;
@@ -118,13 +102,9 @@ pre code {
 pre code a {
   border-bottom: 1px dotted var(--text-color);
 }
-ul {
-  padding-inline-start: 20px;
-}
 li {
   font-size: 1rem;
   color: var(--text-color-2);
-  margin-bottom: 16px;
 }
 p code,
 li code {
@@ -144,9 +124,6 @@ li p {
 p code a,
 li code a {
   border-bottom: 1px dotted var(--text-color);
-}
-section {
-  margin-bottom: 32px;
 }
 img.small {
   width: 32px;
