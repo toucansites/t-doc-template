@@ -76,19 +76,17 @@
     <div class="select-wrapper">
 
       <div class="select-container">
-        <select id="menu-select">
-          {{#site.navigation}}
-            {{#url}}
-              <option value="{{baseUrl}}{{url}}">{{label}}</option>
-            {{/url}}
-            {{#webUrl}}
-              <option value="{{webUrl}}">{{label}}</option>
-            {{/webUrl}}
-          {{/site.navigation}}
-        </select>
+        <div class="select-field">
+          <select id="menu-select">
+            {{#site.navigation}}
+              {{#url}}<option value="{{baseUrl}}{{url}}">{{label}}</option>{{/url}}
+              {{#webUrl}}<option value="{{webUrl}}">{{label}}</option>{{/webUrl}}
+            {{/site.navigation}}
+          </select>
+          <span class="select-icon" style="--icon: url('{{baseUrl}}/images/mobile-select-icon.svg');"></span>
+        </div>
 
-        <span class="select-icon" style="--icon: url('{{baseUrl}}/images/mobile-select-icon.svg');"></span>
-
+        <button id="close-menu" aria-label="Close Menu">✕</button>
       </div>
 
       <div class="menu-list">
@@ -105,10 +103,6 @@
       </div>
 
     </div>
-
-    <div class="menu-divider"></div> 
-
-    <button id="close-menu" aria-label="Close Menu">✕</button>
     
   </div>
 
@@ -121,6 +115,22 @@
   const baseUrl = window.location.origin;
   const currentUrl = window.location.href;
   const menuSelect = document.getElementById('menu-select');
+
+  let scrollY = 0;
+
+  function lockScroll() {
+    scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
+  }
+
+  function unlockScroll() {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollY);
+  }
 
   document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('#navigation .menu-items a');
@@ -143,11 +153,13 @@
   if (menuToggle) {
     menuToggle.addEventListener('click', () => {
       mobileMenu.classList.add('menu-open');
+      lockScroll();
     });
   }
   if (closeMenu) {
     closeMenu.addEventListener('click', () => {
       mobileMenu.classList.remove('menu-open');
+      unlockScroll();
     });
   }
   if (menuSelect) {
@@ -177,9 +189,16 @@
         if (mobileMenu.classList.contains('menu-open')) {
           if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
             mobileMenu.classList.remove('menu-open');
+            unlockScroll();
           }
         }
     }
   });
+
+  document.addEventListener('touchmove', (e) => {
+    if (mobileMenu.classList.contains('menu-open') && !mobileMenu.contains(e.target)) {
+      e.preventDefault();
+    }
+  }, { passive: false });
 
 </script>

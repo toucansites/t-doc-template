@@ -54,6 +54,7 @@
   width: 40px;
   height: 48px;
   background-color: var(--link-color-hover);
+  -webkit-mask: var(--icon) center / contain no-repeat;
   mask: var(--icon) no-repeat center / contain;
   vertical-align: middle;
 }
@@ -65,6 +66,7 @@
   padding-top: 8px;
   border-top: 1px solid var(--background-color-3);
   width: 100%;
+  vertical-align: middle;
 }
 
 #menu-toggle {
@@ -74,6 +76,7 @@
   color: #268080;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .menu-toggle-icon {
@@ -81,6 +84,7 @@
   width: 24px;
   height: 24px;
   background-color: var(--link-color-hover);
+  -webkit-mask: var(--icon) center / contain no-repeat;
   mask: var(--icon) no-repeat center / contain;
   vertical-align: middle;
 }
@@ -119,6 +123,7 @@
   width: 20px;
   height: 20px;
   background-color: var(--link-color-hover);
+  -webkit-mask: var(--icon) center / contain no-repeat;
   mask: var(--icon) no-repeat center / contain;
   vertical-align: middle;
 }
@@ -195,7 +200,7 @@
   }
 
   .guide-category-link {
-    display: none;
+    display: none !important;
   }
   
 }
@@ -232,12 +237,52 @@
 
 }
 
+.guide-category-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+  color: var(--text-color-1);
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin-bottom: 2em;
+}
+
+.guide-category-link a,
+.guide-category-link .active {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color-1);
+}
+
+.guide-category-link .active {
+  font-weight: 600;
+  color: var(--link-color-hover);
+}
+
+.guide-category-link .breadcrumbs-arrow {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  background-color: var(--link-color-hover);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) no-repeat center / contain;
+}
+
 .mobile-menu {
   position: fixed;
   top: 0;
   left: -100%;
   width: 100%;
-  height: auto;
+  height: 100vh;
+  overflow-x: hidden;         
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y; 
   background: linear-gradient(
     268deg,
     var(--primary-color-200) 0%,
@@ -247,9 +292,17 @@
   z-index: 999;
   padding: 20px;
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.menu-divider {
+  flex: 0 0 1px;
+  align-self: stretch;
+  background-color: var(--primary-color-100);
+  margin-left: 30px;
+  box-sizing: border-box;
+  border: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -270,23 +323,14 @@
   background: none;
   border: none;
   font-size: 24px;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  margin-left: 15px;
-  margin-right: 0px;
-  align-self: flex-start;
-  color: var(--text-color)
+  color: var(--text-color);
+  flex-shrink: 0;
+  align-self: center;
+  margin-left: auto;
 }
-
-.menu-divider {
-  align-self: stretch;
-  width: 1px;
-  border-right: 1px solid var(--primary-color-100);
-  margin-left: 30px;
-  box-sizing: border-box;
-}
-
 
 #menu-select {
   max-width: 235px;
@@ -294,16 +338,25 @@
 
 .select-wrapper {
   flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .select-container {
-  position: relative;
-  max-width: 235px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
-.select-container select {
+.select-field {
+  position: relative;
+  max-width: 235px;
+  flex: 1;
+}
+
+.select-field select {
   width: 100%;
   padding: 10px 40px 10px 12px; 
   border: 1px solid var(--background-color-3);
@@ -322,7 +375,7 @@
   outline: none;
 }
 
-.select-container .select-icon {
+.select-field .select-icon {
   position: absolute;
   right: 0px;                 
   top: 50%;
@@ -333,6 +386,10 @@
   pointer-events: none;
   background-color: var(--text-color-1);
   mask: var(--icon) no-repeat center / contain;
+}
+
+.menu-list {
+  margin-bottom: 10vh;
 }
 
 .menu-list a {
