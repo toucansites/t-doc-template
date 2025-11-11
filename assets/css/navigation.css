@@ -98,13 +98,23 @@
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
-  line-height: 24px;
   letter-spacing: 0.5px;
 }
 
 .nav-breadcrumbs a:link {
   text-decoration: none;
   color: var(--text-color-1);
+}
+
+.breadcrumbs-arrow {
+  display: flex;  
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--link-color-hover);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) no-repeat center / contain;
+  vertical-align: middle;
 }
 
 .nav-breadcrumbs div.active {
@@ -116,16 +126,6 @@
   letter-spacing: 0.5px;
   vertical-align: middle;
   color: var(--link-color-hover);
-}
-
-.breadcrumbs-arrow {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: var(--link-color-hover);
-  -webkit-mask: var(--icon) center / contain no-repeat;
-  mask: var(--icon) no-repeat center / contain;
-  vertical-align: middle;
 }
 
 .separator {
@@ -181,7 +181,7 @@
   vertical-align: middle;
 }
 
-@media (max-width: 499.98px) {
+@media (max-width: 899.98px) {
   .desktop-nav {
     display: none;
   }
@@ -205,7 +205,7 @@
   
 }
 
-@media (min-width: 500px) {
+@media (min-width: 900px) {
   #navigation {
     flex-direction: row;
     align-items: center;

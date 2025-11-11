@@ -411,4 +411,12 @@ document.addEventListener('DOMContentLoaded', function () {
     modalBtnMobile.addEventListener('click', openModal);
   }
 
+  const images = document.querySelectorAll('article img');
+    images.forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        window.open(img.src, '_blank');
+      });
+    });
+
 });

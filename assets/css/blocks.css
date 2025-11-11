@@ -124,6 +124,10 @@
 .copy-btn .icon-clipboard {
   display: block;
 }
+.copy-btn:hover .icon-clipboard path {
+  stroke: var(--link-color);
+}
+
 .copy-btn .icon-check {
   display: none;
   fill: #22c55e;

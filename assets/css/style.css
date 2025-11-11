@@ -778,6 +778,7 @@ section .next {
 .prev.disabled,
 .next.disabled {
   pointer-events: none;
+  opacity: 0.5;
 }
 
 .prev.disabled .nav-title,

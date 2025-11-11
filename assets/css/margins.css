@@ -43,9 +43,6 @@ pre {
 ul {
   padding-inline-start: 20px;
 }
-li {
-  margin-bottom: var(--default-margin);
-}
 section {
   margin-bottom: var(--default-margin);
 }
