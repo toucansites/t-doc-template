@@ -1,20 +1,18 @@
 # T-Doc
 
-A sleek, modern documentation template for Toucan
+A sleek, modern documentation template for Toucan. 
+Check out the [Demo](https://toucansites.github.io/t-doc-template-demo/)  
+
+[![Toucan template T-Doc Documentation theme](./T-doc_template_main.png)](https://toucansites.github.io/t-doc-template-demo/)
 
 ## Introduction
 
 T-Doc is a powerful and flexible documentation template for [Toucan](https://toucansites.com). It is designed to help you create clear, structured, and easy-to-maintain documentation for any type of product, service, or project.
 
-**Demo**
-
-Check out the [Demo](https://toucansites.github.io/t-doc-template-demo/)  
-[![Toucan template T-Doc Documentation theme](./T-doc_template_main.png)](https://toucansites.github.io/t-doc-template-demo/)
-
 ## Toucan template features - All Toucan templates are…
 
 - **Highly Customizable**: Personalize appearance such as color, font, menu, social Links, SEO meta tags, and even more to the preferences of You and your Visitors.
-- **Lightning-Fast** by Default (100 GTMetrix Performance Score): T-Doc delivers blazing-fast load times, ensuring ****a seamless experience for every visitor without delays or frustration.
+- **Lightning-Fast** by Default (100% GTMetrix Performance Score): T-Doc delivers blazing-fast load times, ensuring a seamless experience for every visitor without delays or frustration.
 - **Easy to deploy** via GitHub Actions: Your updates go live instantly — no manual overhead.
 - **Free Hosting** with GitHub Pages: Deploy your blog without spending a dime on hosting.
 - **Markdown-Powered** Content: Write and manage your content effortlessly with Markdown
