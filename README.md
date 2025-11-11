@@ -91,6 +91,6 @@ After that, it will open up a preview of the template in your default browser, w
 
 ### **Need Custom Development Services?**
 
-Besides developing [Toucan SSG](https://github.com/toucansites/toucan) blazing-fast themes, we help businesses create fast, performance-focused, scalable & secure products using Swift.
+Besides developing [Toucan SSG](https://github.com/toucansites/toucan) blazing-fast templates, we help businesses create fast, performance-focused, scalable & secure products using Swift.
 
 If you need complete development services from scratch you can [Hire Us](https://binarybirds.com/contact/).
