@@ -9,7 +9,7 @@ T-Doc is a powerful and flexible documentation template for [Toucan](https://tou
 **Demo**
 
 Check out the [Demo](https://toucansites.github.io/t-doc-template-demo/)  
-[![Toucan template T-Doc Documentation theme](./assets/images/T-doc_template_main.png)](https://toucansites.github.io/t-doc-template-demo/)
+[![Toucan template T-Doc Documentation theme](./T-doc_template_main.png)](https://toucansites.github.io/t-doc-template-demo/)
 
 ## Toucan template features - All Toucan templates are…
 
