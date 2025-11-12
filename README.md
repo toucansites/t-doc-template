@@ -23,7 +23,7 @@ T-Doc is a powerful and flexible documentation template for [Toucan](https://tou
 
 ### T-Doc template highlights - Plus T-Doc has…
 
-- X Pre-Designed Pages
+- 4 Pre-Designed Pages
 - Dark mode support
 - Copy to clipboard button on code snippets
 - 2-level hierarchy (category - guide)
