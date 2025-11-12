@@ -39,7 +39,7 @@ T-Doc is a powerful and flexible documentation template for [Toucan](https://tou
 - [Markdown](https://www.markdownguide.org/)
 - [Swift](https://www.swift.org/)
 - [HTML](https://www.w3schools.com/html/default.asp)
-- CSS
+- [CSS](https://www.w3schools.com/css/default.asp)
 - [YAML](https://yaml.org/)
 - [JavaScript](https://www.w3schools.com/js/) (optional) - zero JS by default
   
