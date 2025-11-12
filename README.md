@@ -1,24 +1,75 @@
 # T-Doc
 
-A sleek, modern documentation template for Toucan
+A sleek, modern documentation template for Toucan. 
+Check out the [Demo](https://toucansites.github.io/t-doc-template-demo/)  
+
+[![Toucan template T-Doc Documentation template](./T-doc_template_main.png)](https://toucansites.github.io/t-doc-template-demo/)
 
 ## Introduction
 
 T-Doc is a powerful and flexible documentation template for [Toucan](https://toucansites.com). It is designed to help you create clear, structured, and easy-to-maintain documentation for any type of product, service, or project.
 
-## Features
+## Toucan template features - All Toucan templates are…
 
-- **Markdown-Powered Content**: Write and manage your content effortlessly with Markdown—no complex CMS required.
-- **Lightning-Fast Performance**: As a static site, T-Doc delivers blazing-fast load times, ensuring your readers quickly find what they're looking for.
-- **Free Hosting with GitHub Pages**: Deploy your blog without spending a dime on hosting. T-Doc is fully compatible with GitHub Pages, making it simple and cost-effective to share your content with the world.
-- **Dark Mode Support**: Switch between light and dark modes to cater to your audience's preferences—a must-have for modern blogs.
-- **Social Links**: Built into the footer—just change your social URLs and you're done.
-- **Responsive Design**: Whether on desktop, tablet, or mobile, T-Doc scales beautifully, ensuring your blog looks flawless on any device.
-- **Configuration settings:** Personalize your blog's appearance with flexible configuration options for fonts and colors. Adjust typography and color schemes to match your branding and aesthetic, all within a simple configuration file—no coding required.
-- **Guides**: The core of T-Doc is organized around modular guides—individual pages representing standalone articles or tutorials.
-- **Categories**: Organize guides into flat categories to improve structure and discoverability.
-- **Search:** Enable instant search functionality, allowing readers to quickly find guides by keywords. With a lightweight and fast search system, users can browse your documentation efficiently without requiring a database or external services.
+- **Highly Customizable**: Personalize appearance such as color, font, menu, social Links, SEO meta tags, and even more to the preferences of You and your Visitors.
+- **Lightning-Fast** by Default (100% [GTMetrix](https://gtmetrix.com/) Performance Score): T-Doc delivers blazing-fast load times, ensuring a seamless experience for every visitor without delays or frustration.
+- **Easy to deploy** via GitHub Actions: Your updates go live instantly — no manual overhead.
+- **Free Hosting** with GitHub Pages: Deploy your blog without spending a dime on hosting.
+- **Markdown-Powered** Content: Write and manage your content effortlessly with Markdown
+- **Responsive**: Whether on desktop, tablet, or mobile, this template scales beautifully, ensuring your site looks flawless on any device.
+- **SEO-Friendly** including Sitemap: Search engines can index your site efficiently.
+- **Support Meta Tags**: Adds [Open Graph](https://ogp.me/) support so shared links display rich, branded previews on social media.
+- **Support API** based on your own content: Allowing you to serve structured data or custom endpoints powered by your own content.
 
+### T-Doc template highlights - Plus T-Doc has…
+
+- 4 Pre-Designed Pages
+- Dark mode support
+- Copy to clipboard button on code snippets
+- 2-level hierarchy (category - guide)
+- Previous-next navigation in between guides
+- Guide outlines (Table of Contents)
+- Custom page support
+- Searchable and Navigable
+- Social links
+
+### **Tech Stack and Core Technologies**
+
+- [Mustache](https://mustache.github.io/) template engine
+- [Markdown](https://www.markdownguide.org/)
+- [Swift](https://www.swift.org/)
+- [HTML](https://www.w3schools.com/html/default.asp)
+- [CSS](https://www.w3schools.com/css/default.asp)
+- [YAML](https://yaml.org/)
+- [JavaScript](https://www.w3schools.com/js/) (optional) - zero JS by default
+  
+## Installation
+
+After downloading the template, you have some prerequisites to install. Then you can run it on your localhost. 
+
+**Local setup**
+
+Open the terminal
+
+👉Install dependencies
+
+```
+brew install toucansites/toucan/toucan
+```
+
+👉Run locally
+
+```
+toucan serve & 
+toucan watch
+```
+
+After that, it will open up a preview of the template in your default browser, watch for changes to source files, and live-reload the browser when changes are saved.
+
+## Roadmap
+
+- Version handling
+  
 ## Resources
 
 - [Live Demo Site](https://toucansites.github.io/t-doc-template-demo/)
@@ -36,3 +87,9 @@ T-Doc is a powerful and flexible documentation template for [Toucan](https://tou
 ## Issue Reporting
 
 - If you encounter any bugs or issues, please submit them directly to our GitHub repository for prompt resolution.
+
+### **Need Custom Development Services?**
+
+Besides developing [Toucan SSG](https://github.com/toucansites/toucan) blazing-fast templates, we help businesses create fast, performance-focused, scalable & secure products using Swift.
+
+If you need complete development services from scratch you can [Hire Us](https://binarybirds.com/contact/).
