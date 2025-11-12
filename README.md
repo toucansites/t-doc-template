@@ -3,7 +3,7 @@
 A sleek, modern documentation template for Toucan. 
 Check out the [Demo](https://toucansites.github.io/t-doc-template-demo/)  
 
-[![Toucan template T-Doc Documentation theme](./T-doc_template_main.png)](https://toucansites.github.io/t-doc-template-demo/)
+[![Toucan template T-Doc Documentation template](./T-doc_template_main.png)](https://toucansites.github.io/t-doc-template-demo/)
 
 ## Introduction
 
