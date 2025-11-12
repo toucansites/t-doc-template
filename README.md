@@ -35,7 +35,7 @@ T-Doc is a powerful and flexible documentation template for [Toucan](https://tou
 
 ### **Tech Stack and Core Technologies**
 
-- Mustache template engine
+- [Mustache](https://mustache.github.io/) template engine
 - Markdown
 - Swift
 - HTML
