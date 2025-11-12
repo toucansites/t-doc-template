@@ -29,7 +29,7 @@
                         <path d="m7.825 13 5.6 5.6-1.425 1.4-8-8 8-8 1.425 1.4-5.6 5.6h12.175v2z" fill="#ccc"/>
                         </svg>
                         <div class="nav-text">
-                        <h4>Previous</h4>
+                            <div class="nav-category-title">Previous</div>
                         </div>
                     </div>
                     {{/page.prev}}
@@ -38,11 +38,11 @@
                     <a href="{{permalink}}" class="nav-link">
                     <div class="prev">
                         <svg fill="none" class="nav-arrow nav-arrow--left" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="m7.825 13 5.6 5.6-1.425 1.4-8-8 8-8 1.425 1.4-5.6 5.6h12.175v2z" fill="#079a91"/>
+                        <path d="m7.825 13 5.6 5.6-1.425 1.4-8-8 8-8 1.425 1.4-5.6 5.6h12.175v2z" fill="#005D59"/>
                         </svg>
                         <div class="nav-text">
-                        <h4>Prev - {{category.title}}</h4>
-                        <div class="nav-title">{{title}}</div>
+                            <div class="nav-category-title">Previous - {{category.title}}</div>
+                            <div class="nav-title">{{title}}</div>
                         </div>
                     </div>
                     </a>
@@ -51,7 +51,7 @@
                     {{^page.next}}
                     <div class="next disabled">
                         <div class="nav-text">
-                        <h4>Next</h4>
+                            <div class="nav-category-title">Next</div>
                         </div>
                         <svg class="nav-arrow nav-arrow--right" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="m16.175 13h-12.175v-2h12.175l-5.6-5.6 1.425-1.4 8 8-8 8-1.425-1.4z" fill="#ccc"/>
@@ -63,11 +63,11 @@
                     <a href="{{permalink}}" class="nav-link">
                     <div class="next">
                         <div class="nav-text">
-                        <h4>Next - {{category.title}}</h4>
-                        <div class="nav-title">{{title}}</div>
+                            <div class="nav-category-title">Next - {{category.title}}</div>
+                            <div class="nav-title">{{title}}</div>
                         </div>
                         <svg class="nav-arrow nav-arrow--right" fill="none" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="m16.175 13h-12.175v-2h12.175l-5.6-5.6 1.425-1.4 8 8-8 8-1.425-1.4z" fill="#079a91"/>
+                        <path d="m16.175 13h-12.175v-2h12.175l-5.6-5.6 1.425-1.4 8 8-8 8-1.425-1.4z" fill="#005D59"/>
                         </svg>
                     </div>
                     </a>

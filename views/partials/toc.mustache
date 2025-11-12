@@ -1,6 +1,6 @@
 <aside>
     <script>
-document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
     //console.log("TOC Highlight Script Loaded");
 
     const sections = document.querySelectorAll("article [id]");
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {{#empty(page.contents.outline)}}
     {{/empty(page.contents.outline)}}
     {{^empty(page.contents.outline)}}
-    <h4>On this page</h4>
+    <strong>On this page</strong>
     <ul>
     {{#page.contents.outline}}
         <li class="level-{{level}}">

@@ -5,7 +5,7 @@
   --primary-color-300: #58f0dc;
   --primary-color-400: #26dbca;
   --primary-color-500: #0dbfb1;
-  --primary-color-600: #079a91;
+  --primary-color-600: #005D59;
   --primary-color-700: #0a7b75;
   --primary-color-800: #0e615e;
   --primary-color-900: #10514e;
@@ -25,7 +25,7 @@
 
   --link-color: var(--primary-color-600);
   --link-color-visited: var(--primary-color-600);
-  --link-color-hover: var(--primary-color-600);
+  --link-color-hover: #079a91;
   --link-color-active: #e6885a;
 
   --background-color: #fff;

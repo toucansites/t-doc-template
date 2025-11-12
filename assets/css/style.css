@@ -121,6 +121,8 @@ a.cta:hover {
   font-weight: 600;
   font-size: 14px;
   vertical-align: middle;
+  text-decoration: none;
+  padding-bottom: 10px;
 }
 
 #docs .left li a {
@@ -169,6 +171,7 @@ a.cta:hover {
 }
 #docs .left ul li a {
   color: var(--text-color-3);
+  text-decoration: none;
 }
 #docs .left ul li a:hover {
   color: var(--link-color-hover);
@@ -192,6 +195,7 @@ a.cta:hover {
 #docs .right ul li {
   font-size: 14px;
   list-style-type: none;
+  margin-bottom: 13px;
 }
 #docs .right ul ul {
   margin-top: 8px;
@@ -201,6 +205,7 @@ a.cta:hover {
 }
 #docs .right a {
   color: var(--text-color-3);
+  text-decoration: none;
 }
 
 #docs .right .active {
@@ -210,7 +215,7 @@ a.cta:hover {
 }
 
 #docs .right ul a:hover {
-  color: var(--text-color-1);
+  color: var(--link-color-hover);
 }
 @media screen and (min-width: 900px) {
   #docs {
@@ -401,6 +406,11 @@ div.exercise summary {
   transition: height 1s ease;
   font-weight: 800;
 }
+
+div.exercise summary a {
+  text-decoration: none;
+}
+
 div.exercise summary h3 {
   margin-top: 0;
 }
@@ -693,15 +703,18 @@ section .next {
   flex: 0 0 auto;
 }
 
-.prev .nav-text {
+.prev .nav-text,
+.next .nav-text {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-between;
   width: 100%;
   min-width: 0;
+  height: 100%;
 }
 
-.prev .nav-text h4 {
+.prev .nav-text .nav-category-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -749,7 +762,7 @@ section .next {
   min-width: 0;
 }
 
-.next .nav-text h4 {
+.next .nav-text .nav-category-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;

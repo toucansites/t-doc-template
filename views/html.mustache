@@ -18,16 +18,16 @@
     <meta property="og:url" content="{{page.permalink}}">
     <meta property="og:title" content="{{page.title}} - {{site.name}}">
     <meta property="og:description" content="{{page.description}}">
-    {{#page.image}}<meta property="og:image" content="{{.}}" />{{/page.image}}
+    {{#page.image}}<meta property="og:image" content="{{baseUrl}}{{.}}" />{{/page.image}}
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{page.title}} - {{site.name}}">
     <meta name="twitter:description" content="{{page.description}}">
-    {{#page.image}}<meta name="twitter:image" content="{{.}}">{{/page.image}}
+    {{#page.image}}<meta name="twitter:image" content="{{baseUrl}}{{.}}">{{/page.image}}
     
     <link rel="apple-touch-icon" sizes="180x180" href="{{baseUrl}}/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{baseUrl}}/favicon.svg">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{baseUrl}}/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{baseUrl}}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{baseUrl}}/favicon-16x16.png">
     <link rel="manifest" href="{{baseUrl}}/site.webmanifest">
 
     <link rel="stylesheet" href="{{baseUrl}}/css/modern-normalize.css">

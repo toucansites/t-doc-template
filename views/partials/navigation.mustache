@@ -5,7 +5,7 @@
       <a href="{{baseUrl}}/" class="logo">
         <img
           src="{{baseUrl}}/images/logos/logo.png"
-          alt="{{site.name}}"
+          alt="{{site.name}} header icon"
           title="{{site.name}}"
         />
         <span>{{site.name}}</span>
@@ -77,12 +77,16 @@
 
       <div class="select-container">
         <div class="select-field">
-          <select id="menu-select">
+
+          <select aria-label="State" id="menu-select">
             {{#site.navigation}}
               {{#url}}<option value="{{baseUrl}}{{url}}">{{label}}</option>{{/url}}
               {{#webUrl}}<option value="{{webUrl}}">{{label}}</option>{{/webUrl}}
             {{/site.navigation}}
           </select>
+
+
+
           <span class="select-icon" style="--icon: url('{{baseUrl}}/images/mobile-select-icon.svg');"></span>
         </div>
 

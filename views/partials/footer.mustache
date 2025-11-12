@@ -8,7 +8,7 @@
             <a href="{{baseUrl}}/" class="logo">
                 <img
                     src="{{baseUrl}}/images/logos/logo.png"
-                    alt="{{site.name}}"
+                    alt="{{site.name}} footer icon"
                     title="{{site.name}}"
                 />
                 <span>{{site.name}}</span>
@@ -19,7 +19,8 @@
         <div class="footer-top-div2">
             {{#site.footer-socials}}
                 <small>
-                    <a href="{{url}}" target="_blank">
+                <small>
+                    <a aria-label="{{title}}" href="{{url}}" target="_blank"></a>
                         {{#icon}}
                             {{{icon}}}
                         {{/icon}}

@@ -9,6 +9,10 @@
   }
 }
 
+.hero-card-block-link {
+  text-decoration: none;
+}
+
 .hero-card-block {
   width: 285px;
   height: auto;          
@@ -41,7 +45,7 @@
   padding: 10px;
 }
 
-.hero-card h5 {
+.hero-card .hero-card-title {
   font-family: 'Montserrat';
   font-weight: 600;              
   font-size: 16px;
