@@ -55,7 +55,6 @@ Open the terminal
 
 ```
 brew install toucansites/toucan/toucan
-
 ```
 
 👉Run locally
