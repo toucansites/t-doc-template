@@ -18,7 +18,7 @@ T-Doc is a powerful and flexible documentation template for [Toucan](https://tou
 - **Markdown-Powered** Content: Write and manage your content effortlessly with Markdown
 - **Responsive**: Whether on desktop, tablet, or mobile, this template scales beautifully, ensuring your site looks flawless on any device.
 - **SEO-Friendly** including Sitemap: Search engines can index your site efficiently.
-- **Support OG Image**: Adds Open Graph image support so shared links display rich, branded previews on social media.
+- **Support Meta Tags**: Adds [Open Graph](https://ogp.me/) support so shared links display rich, branded previews on social media.
 - **Support API** based on your own content: Allowing you to serve structured data or custom endpoints powered by your own content.
 
 ### T-Doc template highlights - Plus T-Doc has…
