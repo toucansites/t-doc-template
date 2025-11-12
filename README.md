@@ -12,7 +12,7 @@ T-Doc is a powerful and flexible documentation template for [Toucan](https://tou
 ## Toucan template features - All Toucan templates are…
 
 - **Highly Customizable**: Personalize appearance such as color, font, menu, social Links, SEO meta tags, and even more to the preferences of You and your Visitors.
-- **Lightning-Fast** by Default (100% GTMetrix Performance Score): T-Doc delivers blazing-fast load times, ensuring a seamless experience for every visitor without delays or frustration.
+- **Lightning-Fast** by Default (100% [GTMetrix](https://gtmetrix.com/) Performance Score): T-Doc delivers blazing-fast load times, ensuring a seamless experience for every visitor without delays or frustration.
 - **Easy to deploy** via GitHub Actions: Your updates go live instantly — no manual overhead.
 - **Free Hosting** with GitHub Pages: Deploy your blog without spending a dime on hosting.
 - **Markdown-Powered** Content: Write and manage your content effortlessly with Markdown
