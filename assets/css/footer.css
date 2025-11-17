@@ -62,6 +62,7 @@
 }
 .footer-top-div2 a{
   margin-right: 10px;
+  text-decoration: none;
 }
 .footer-top-div2 a svg{
   fill: var(--text-color-1);
