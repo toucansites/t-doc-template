@@ -35,7 +35,7 @@ pre {
 
 /**
 * Show link underline only on hover.
-*/
+
 
 a {
  text-decoration: none;
@@ -44,6 +44,7 @@ a {
 a:hover {
  text-decoration: underline;
 }
+ */
 
 /**
 * Remove outline on active/hovered focused links.

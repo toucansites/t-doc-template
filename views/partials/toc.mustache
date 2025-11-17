@@ -1,13 +1,13 @@
 <aside>
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("TOC Highlight Script Loaded");
+    document.addEventListener("DOMContentLoaded", function () {
+    //console.log("TOC Highlight Script Loaded");
 
     const sections = document.querySelectorAll("article [id]");
-    console.log("Detected Sections:", [...sections].map(el => el.id));
+    //console.log("Detected Sections:", [...sections].map(el => el.id));
 
     const tocLinks = document.querySelectorAll(".right aside ul a");
-    console.log("Detected TOC Links:", tocLinks);
+    //console.log("Detected TOC Links:", tocLinks);
 
     let lastActiveId = null;
     let isManualScroll = false; // Figyeljük, hogy kattintás vagy görgetés történt-e
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let visibleSections = [];
 
         entries.forEach(entry => {
-            console.log(`Checking section: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}, top: ${entry.boundingClientRect.top}`);
+            //console.log(`Checking section: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}, top: ${entry.boundingClientRect.top}`);
 
             if (entry.isIntersecting) {
                 visibleSections.push({
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             lastActiveId = activeId;
 
-            console.log("New Active ID:", activeId);
+            //console.log("New Active ID:", activeId);
 
             // TOC frissítése
             tocLinks.forEach(link => link.classList.remove("active"));
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let linkTargetId = linkHash ? linkHash.substring(1) : null;
 
                 if (linkTargetId === activeId) {
-                    console.log(`Setting active: ${linkHash}`);
+                    //console.log(`Setting active: ${linkHash}`);
                     link.classList.add("active");
                 }
             });
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 setTimeout(() => {
                     isManualScroll = false; // Visszaállítjuk a görgetés követését
                     lastActiveId = targetId;
-                    console.log(`Manually setting active: #${targetId}`);
+                    //console.log(`Manually setting active: #${targetId}`);
 
                     tocLinks.forEach(link => link.classList.remove("active"));
                     tocLinks.forEach(link => {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {{#empty(page.contents.outline)}}
     {{/empty(page.contents.outline)}}
     {{^empty(page.contents.outline)}}
-    <h4>On this page</h4>
+    <strong>On this page</strong>
     <ul>
     {{#page.contents.outline}}
         <li class="level-{{level}}">

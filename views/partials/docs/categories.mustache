@@ -4,6 +4,7 @@
     Empty.
     {{/empty(context.categories)}}
     {{^empty(context.categories)}}
+    
 <style>
 .left aside a.active {
     font-weight: bold;
@@ -24,7 +25,7 @@
     margin-bottom: 0.25rem;
 }
 .left aside summary {
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 .left aside details > summary {
     list-style: none;
@@ -32,34 +33,10 @@
 
 </style>
 
-<!--
-<script type="text/javascript">
-window.onload = function() {
-    let href = window.location.href;
-    var elements = Array.from(document.querySelectorAll("details a"));
-    elements.forEach(function(element) {
-        if (element.href == href) {
-
-            element.classList.add("active");
-            let isSummary = element.parentElement.nodeName.toLowerCase() == "summary"
-            if (isSummary) {
-                let details = element.parentElement.parentElement
-                details.open = true
-            }
-            else {    
-                let details = element.parentElement.parentElement.parentElement
-                details.open = true
-            }
-        }
-    });
-}
-</script>
--->
-
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function () {
     let currentUrl = window.location.href;
-    console.log(currentUrl);
+    //console.log(currentUrl);
     document.querySelectorAll("aside a").forEach(link => {
         if (link.getAttribute("href") === currentUrl) {
             link.classList.add("active");
@@ -73,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
     <button id="open-modal-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--link-color)" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
     Search...</button>
@@ -89,21 +66,5 @@ document.addEventListener("DOMContentLoaded", function () {
         </ul>
     </details>
     {{/context.categories}}
-    <!--
-    <br><br>
-    
-    <ul>
-    {{#context.categories}}
-        <li class="category">
-            <a href="{{permalink}}">{{title}}</a>
-            <ul>
-            {{#guides}}
-                <li><a href="{{permalink}}">{{title}}</a></li>
-            {{/guides}}
-            </ul>
-        </li>
-    {{/context.categories}}
-    </ul>
-    -->
     {{/empty(context.categories)}}
 </aside>

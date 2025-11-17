@@ -4,7 +4,7 @@
 }
 
 ::selection {
-  color: var(--link-color);
+  color: var(--text-color-3);
   background: var(--background-color-3);
 }
 a:link {
@@ -15,63 +15,59 @@ a:visited {
 }
 a:hover {
   color: var(--link-color-hover);
-  text-decoration: none;
 }
 a:active {
   color: var(--link-color-hover);
 }
 
 html {
-  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  min-height: 100vh;
-  /* display: flex;
-  flex-direction: column; */
-  font-size: 18px;
+  font-family: 'Lato';
 }
 body {
   color: var(--text-color);
 }
+
 h1 {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 48px;
+  letter-spacing: -0.063rem;
+  vertical-align: middle;
 }
 h2 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  margin-top: 1.5rem;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: -0.031rem;
+  vertical-align: middle;
 }
 h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  margin-top: 1.5rem;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: 0rem;
+  vertical-align: middle;
 }
 h4 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 0rem;
+  vertical-align: middle;
 }
 h5 {
-  font-size: 1.75rem;
-  line-height: 2rem;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 0rem;
+  vertical-align: middle;
 }
 h6 {
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 8px;
-  font-weight: 600;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0rem;
+  vertical-align: middle;
 }
 hr {
   border: none;
@@ -84,23 +80,18 @@ hr.spacer {
 p {
   font-size: 1rem;
   line-height: 1.5rem;
-  margin-top: 16px;
-  margin-bottom: 32px;
   color: var(--text-color-2);
-  margin-bottom: 32px;
 }
 pre {
   font-size: 1rem;
   line-height: 1.5rem;
   background: var(--background-color);
-  margin: 2rem auto;
-  border: 2px solid var(--background-color-1);
+  border: 1px solid var(--background-color-2);
   border-radius: 0.75rem;
-  margin-bottom: 32px;
 }
 pre code {
   text-shadow: none;
-  font-family: monospace;
+  font-family: 'Montserrat';
   display: block;
   overflow-x: auto;
   white-space: pre;
@@ -110,18 +101,13 @@ pre code {
 pre code a {
   border-bottom: 1px dotted var(--text-color);
 }
-ul {
-  list-style: none;
-  padding-inline-start: 1rem;
-}
 li {
   font-size: 1rem;
   color: var(--text-color-2);
-  margin-bottom: 16px;
 }
 p code,
 li code {
-  font-family: monospace;
+  font-family: 'Montserrat';
   font-weight: bold;
   background: var(--background-color-1);
   padding: 2px 8px;
@@ -138,9 +124,6 @@ p code a,
 li code a {
   border-bottom: 1px dotted var(--text-color);
 }
-section {
-  margin-bottom: 64px;
-}
 img.small {
   width: 32px;
 }
@@ -154,11 +137,12 @@ img.rounded {
   border-radius: 50%;
 }
 blockquote p {
-  padding: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: block;
-  border-left: 0.75rem solid var(--background-color-3);
-  border-radius: 0.75rem;
-  background: var(--background-color-1);
+  border: 1px solid var(--background-color-2);
 }
 
 .selection-off {
@@ -178,10 +162,11 @@ blockquote p {
   z-index: 0;
   top: 0;
   right: 0;
-  background: radial-gradient(
-    circle at top right,
-    var(--primary-color-200) 1%,
-    var(--white-color) 40%
+  background: linear-gradient(
+    260deg,
+    var(--primary-color-200) 0%,
+    var(--white-color) 28%,
+    var(--white-color) 100%
   );
 }
 
