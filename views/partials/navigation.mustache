@@ -147,7 +147,7 @@
       if (currentPath == "/404.html" || !href.includes(baseUrl)) return;
       if (currentPath.includes(linkText)) {
         link.classList.add('active');
-      } else if (linkText == "docs" && currentPath != "/license/") {
+      } else if (linkText == "docs" && !currentPath.includes("license")) {
         link.classList.add('active');
       }
       

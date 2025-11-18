@@ -18,21 +18,19 @@
 
         <div class="footer-top-div2">
             {{#site.footer-socials}}
-                <small>
-                    <a aria-label="{{title}}" href="{{url}}" target="_blank"></a>
-                        {{#icon}}
-                            {{{icon}}}
-                        {{/icon}}
-                        {{^icon}}
-                            {{#iconLocal}}
-                                <span class="footer-local-icon" style="--icon: url('{{baseUrl}}{{.}}');"></span>
-                            {{/iconLocal}}
-                            {{^iconLocal}}
-                                {{title}}
-                            {{/iconLocal}}
-                        {{/icon}}
-                    </a>
-                </small>
+                <a aria-label="{{title}}" href="{{url}}" target="_blank">
+                    {{#icon}}
+                        {{{icon}}}
+                    {{/icon}}
+                    {{^icon}}
+                        {{#iconLocal}}
+                            <span class="footer-local-icon" style="--icon: url('{{baseUrl}}{{.}}');"></span>
+                        {{/iconLocal}}
+                        {{^iconLocal}}
+                            {{title}}
+                        {{/iconLocal}}
+                    {{/icon}}
+                </a>
             {{/site.footer-socials}}
             {{^site.footer-socials}}
                 <small>No social links</small>
